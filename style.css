@@ -1,0 +1,36 @@
+/*
+Theme Name: Andean Trip Machu Picchu 
+Theme URI: https://bremdows.wordpress.org
+Author: bremdow_dev
+Author URI: https://www.twitter.com/bremdows_dev
+Description: Somos una agencia de viajes encargada de brindar servicios de guía y recorrido en los principales lugares turísticos del Cusco
+Version: 1.0
+License: GNU General Public Licence v2 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: Andean, Travel Machupicchu, Tours Machu Picchu, Cusco, Machu Picchu, Andean Trip Machu Picchu
+Text Domain: andeantrip
+*/
+
+/* VARIABLES GLOBALES DEL SITIO */
+:root{
+	/* COLORES  */
+	/* FUENTES */
+}
+
+/* ESTILOS GENERALES */
+*,
+*:before,
+*:after{
+	box-sizing: inherit;
+}
+html{
+	box-sizing: border-box;
+	font-size: 62.5%; /* Now 1rem is equal to 10px */
+}
+body{
+	font: normal normal 16px "", Arial, Helvetica, sans-serif;
+}
+a{
+	text-decoration: none;
+}
+
