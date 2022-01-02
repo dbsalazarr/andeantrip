@@ -4,7 +4,7 @@ Theme URI: https://bremdows.wordpress.org
 Author: bremdow_dev
 Author URI: https://www.twitter.com/bremdows_dev
 Description: Somos una agencia de viajes encargada de brindar servicios de guía y recorrido en los principales lugares turísticos del Cusco
-Version: 1.0
+Version: v7.5
 License: GNU General Public Licence v2 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: Andean, Travel Machupicchu, Tours Machu Picchu, Cusco, Machu Picchu, Andean Trip Machu Picchu
@@ -14,10 +14,23 @@ Text Domain: andeantrip
 /* VARIABLES GLOBALES DEL SITIO */
 :root{
 	/* COLORES  */
-	/* FUENTES */
-}
+	--colorPrincipal:#0B7EF3;
+	--colorSecundario: #D806DD;
+	--colorMenu: #1C4961;
+	--negro: #000;
+	--blanco: #fff;
 
-/* ESTILOS GENERALES */
+
+	/* FUENTES */
+	--fuentePrincipal: "Montserrat", Arial, Helvetica, sans-serif;
+}
+/*
+	ESTILOS GENERALES
+*/
+*{
+	padding: 0;
+	margin: 0;
+}
 *,
 *:before,
 *:after{
@@ -28,9 +41,213 @@ html{
 	font-size: 62.5%; /* Now 1rem is equal to 10px */
 }
 body{
-	font: normal normal 16px "", Arial, Helvetica, sans-serif;
+	font: normal normal 16px var(--fuentePrincipal);
 }
 a{
 	text-decoration: none;
+	color: var(--negro);
 }
+ul{
+	list-style: none;
+}
+img{
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+h1{}
+h2{}
+h3{}
+h4{}
+h5{}
+h6{}
+/* 
+	FUENTES
+*/
+@font-face{
+	font-family: 'andean-icons';
+      src: url('./icons/font/andean-icons.eot?8630050');
+      src: url('./icons/font/andean-icons.eot?8630050#iefix') format('embedded-opentype'),
+           url('./icons/font/andean-icons.woff?8630050') format('woff'),
+           url('./icons/font/andean-icons.ttf?8630050') format('truetype'),
+           url('./icons/font/andean-icons.svg?8630050#andean-icons') format('svg');
+      font-weight: normal;
+      font-style: normal;
+}
+/*
+	UTILITARIOS
+*/
+.centrar{
+	max-width: 90%;
+	margin: 0 auto;
+}
+.contenedor-principal{
+	max-width: 192rem;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.text-center{
+	text-align: center;
+}
+.seccion{
+	width: 90%;
+	margin: 2rem auto;
+}
+/*
+	CABECERA MENUS DE NAVEGACIÓN [PRINCIPAL Y SOCIAL]
+*/
+.cabecera{
+	height: 8rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem 2rem;
+	position: relative;
+	z-index: 11;
+}
+.cabecera .logo{
+	margin-right: 2rem;
+}
+@media only screen and (min-width: 768px){
+	.cabecera{
+		justify-content: flex-start;
+	}
+}
+.menu-principal{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: var(--blanco);
+	transform: scaleY(0);
+	transform-origin: top center;
+	transition: transform .25s ease-out;
+}
+.menu-principal.active{
+	transform: scaleY(1);
+}
+.menu-principal ul{
+	text-align: center;
+}
+.menu-principal ul li a{
+	display: block;
+	padding: 2rem 1rem;
+}
+.menu-social,
+.menu-social.tablet{
+	display: none;
+}
+.menu-social.table{
+	width: 100%;
+}
+.menu-social ul{
+	display: flex;
+	justify-content: center;
+}
+.menu-social ul li{
+	margin-right: 2rem;
+}
+.menu-social ul li a span{
+	display: none;
+}
+.menu-social ul li:last-child{
+	margin-right: 0;
+}
+.menu-social ul li a:after{
+	display: block;
+	width: 4rem;
+	height: 4rem;
+	font-family: "andean-icons";
+	content: '';
+	line-height: 4rem;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 2.5rem;
+	color: var(--blanco);
+}
+.menu-social ul li a[href*="facebook.com"]:after{background: #334C8C; content: '\f09a';}
+.menu-social ul li a[href*="twitter.com"]:after{background: #00A6DE;content: '\f099';}
+.menu-social ul li a[href*="youtube.com"]:after{background: #F20000;content: '\f16a';}
+.menu-social ul li a[href*="instagram.com"]:after{background: #8F1FA3;content: '\f16d';}
+
+@media only screen and (min-width: 768px){
+	.bar-menu{
+		display: none;
+	}
+	.menu-principal{
+		position: static;
+		transform: scaleY(1);
+		height: auto;
+		background: transparent;
+	}
+	.menu-principal ul{
+		display: flex;
+		justify-content: space-between;
+	}
+	.menu-principal ul li:last-of-type{
+		margin-right: 0;
+	}
+	.menu-principal ul li a{
+		color: var(--blanco);
+	}
+	.menu-social.tablet{
+		display: block;
+	}
+}
+@media only screen and (min-width: 1024px){
+	.menu-social{
+		display: block;	
+	}
+	.menu-social.tablet{
+		display: none;
+	}
+	.menu-principal{
+		max-width: 60rem;
+	}
+	.menu-principal ul li a{
+		color: var(--negro);
+	}
+	.cabecera{
+		justify-content: space-between;
+	}
+}
+/*
+	PORTADA VIDEO OR IMAGE
+*/
+.media-portada{
+	height: 60vh;
+}
+.portada-video{
+	display: none;
+}
+.portada-img{
+	position: absolute;
+	transform: translate(-26%, -30%);
+	z-index: -1;
+	width: 200%;
+	height: 100%;
+	border-radius: 0 0 50% 50%;
+}
+.portada-img img{
+	border-radius: 0 0 50% 50%;
+}
+@media only screen and (min-width: 1024px){
+	.media-portada{
+		height: calc(100vh - 8rem);
+	}
+	.portada-video{
+		display: block;
+		height: 100%;
+	}
+	.portada-img{
+		display: none;
+	}
+}
+/*
+	PÁGINA PRINCIPAL
+*/
+
 
