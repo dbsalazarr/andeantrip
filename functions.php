@@ -1,7 +1,7 @@
 <?php 
 	function setup_andean(){
 		// permite la utilización de una imagen para cada entrada 
-		add_theme_support('post-thumbnail');
+		add_theme_support('post-thumbnails');
 		// Agregar los titulos personalizados en la etiqueta title
 		add_theme_support('title-tag');
 
@@ -70,6 +70,78 @@
 			'after_widget' => '</div>'
 		));
 	}
-	add_action('widgets_init', 'andean_widget')
+	add_action('widgets_init', 'andean_widget');
+
+	function andean_testimonios(){
+		$labels = array(
+			'name' => _x('Tours','andeantrip'),
+			'singular_name' => _x('Tours','post type singular name','Tours'),
+			'menu_name' => _x('Tours','admin menu','andeantrip'),
+			'name_admin_bar' => _x('Tour','add new on admin bar','andeantrip'),
+			'add_new' => _x('Add New Tour','book','andeantrip'),
+			'add_new_item' => _x('Add New Tour','andeantrip'),
+			'new_item' => _x('New Tours','andeantrip'),
+			'edit_item' => _x('Edit Tour','andeantrip'),
+			'view_item' => _x('View Tours','andeantrip'),
+			'all_items' => _x('All Tours','andeantrip'),
+			'search_items' => _x('Search Tours','andeantrip'),
+			'parent_item_colon' => _x('Parent Tours','andeantrip'),
+			'not_found' => _x('No Tours Found','andeantrip'),
+			'not_found_in_trash' => _x('No Tours found in Trash','andeantrip')
+		);
+
+		// supports
+		// 'title', 'editor', 'thumbnail', 'author', 'excerpt', 'trackbacks','custom-fields','comments','revisions','page-attributes'
+
+		$args = array(
+			'labels' => $labels,
+			'description' => __('Descripcion','andeantrip'),
+			'public' => true,
+			'publicity_queryable' => true,
+			'show_ui' => true,
+			'show_in_menu' => true,
+			'query_var' => true,
+			'rewrite' => array('slug','tour'),
+			'capability_type' => 'post',
+			'has_archive' => true,
+			'hierarchical' => false,
+			'menu_position' => 7,
+			'supports' => array('title','editor','thumbnail', 'excerpt'),
+			'show_in_rest' => true, // Habilitar Gutenberg
+			'taxonomies' => array('category'),
+			'menu_icon' => 'dashicons-airplane'
+		);
+
+		register_post_type('tour', $args);
+	}
+	add_action('init','andean_testimonios');
+
+	function andean_taxonomy_trips() {
+     $labels = array(
+         'name'              => _x( 'Trips', 'taxonomy general name' ),
+         'singular_name'     => _x( 'Trip', 'taxonomy singular name' ),
+         'search_items'      => __( 'Search Trip' ),
+         'all_items'         => __( 'All Trip' ),
+         'parent_item'       => __( 'Parent Trip' ),
+         'parent_item_colon' => __( 'Parent Trip:' ),
+         'edit_item'         => __( 'Edit Trip' ),
+         'update_item'       => __( 'Update Trip' ),
+         'add_new_item'      => __( 'Add New Trip' ),
+         'new_item_name'     => __( 'New Trip' ),
+         'menu_name'         => __( 'Trip' ),
+     );
+     $args   = array(
+         'hierarchical'      => true, // make it hierarchical (like categories)
+         'labels'            => $labels,
+         'show_ui'           => true,
+         'show_admin_column' => true,
+         'query_var'         => true,
+         'rewrite'           => [ 'slug' => 'trip' ],
+     );
+     //  [custom post type a los cuales se agregara la nueva taxonomia]
+     register_taxonomy( 'trip', [ 'post', 'tour' ], $args );
+	}
+	add_action( 'init', 'andean_taxonomy_trips' );
+?>
 
 ?>

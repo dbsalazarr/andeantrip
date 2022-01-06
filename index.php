@@ -25,5 +25,36 @@
 			Destinos Recomendados
 		</h2>
 
+		<header class="categorias">
+			<a href="#" class="">Fines de Semana</a>
+			<a href="#" class="">Vacaciones</a>
+			<a href="#" class="">Tours en Grupos</a>
+			<a href="#" class="">Viajes Largos</a>
+		</header>
+		<?php 
+			$args = array(
+				'post_type' => 'tour',
+				'post_per_page' => -1
+			);
+
+			$tours = new WP_Query($args);
+		?>
+
+		<div class="grid" id="grid">
+			<?php while( $tours->have_posts() ) : $tours->the_post(); ?>
+			<article class="item"
+				data-categoria = ""
+				data-etiquetas = ""
+			>
+				<div class="tour-imagen">
+					<!-- Imagen -->
+				</div>
+				<div class="tour-detalles">
+					<h3>  <?php the_title(); ?> </h3>
+				</div>
+			</article>
+			<?php endwhile; wp_reset_postdata(); ?>
+		</div>
+
 	</section>
 <?php get_footer(); ?>
