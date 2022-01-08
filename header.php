@@ -49,7 +49,7 @@
 		 ?>
 		 <!-- Fin menu principal -->
 
-		 <!-- Agregando el menu social -->
+		 <!-- Menu Social -->
 		 <?php
 		 	$menu_social = array(
 		 		'theme_location' => 'menu_social',

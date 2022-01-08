@@ -21,6 +21,7 @@
 		wp_register_style('andeanstyle', get_stylesheet_uri(), array('normalize', 'montserrat'), 'v7.5', 'all');
 
 
+
 		// AGREGAR LOS ESTILOS A LA WEB
 		wp_enqueue_style('normalize');
 		wp_enqueue_style('montserrat');
@@ -28,10 +29,17 @@
 
 		// REGISTRANDO LOS SCRIPTS JS
 		wp_register_script('andeanjs', get_template_directory_uri().'/js/principal.js', array(), 'v7.5', true);
+		wp_register_script('muuri', 'https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js', array(), 'v2.3.2', true);
 
 
 		// AGREGANDO LOS EL JS A LA WEB
 		wp_enqueue_script("andeanjs");
+
+
+		// SCRIPTS JS SOLO PARA EL HOME
+		if( is_front_page() ){
+			wp_enqueue_script("muuri");
+		}
 
 	}
 	add_action('wp_enqueue_scripts', 'assets_andean');
@@ -108,7 +116,7 @@
 			'menu_position' => 7,
 			'supports' => array('title','editor','thumbnail', 'excerpt'),
 			'show_in_rest' => true, // Habilitar Gutenberg
-			'taxonomies' => array('category'),
+			'taxonomies' => array('category', 'post_tag'),
 			'menu_icon' => 'dashicons-airplane'
 		);
 
@@ -116,6 +124,7 @@
 	}
 	add_action('init','andean_testimonios');
 
+	// Creando Taxonomias
 	function andean_taxonomy_trips() {
      $labels = array(
          'name'              => _x( 'Trips', 'taxonomy general name' ),
@@ -142,6 +151,4 @@
      register_taxonomy( 'trip', [ 'post', 'tour' ], $args );
 	}
 	add_action( 'init', 'andean_taxonomy_trips' );
-?>
-
 ?>
