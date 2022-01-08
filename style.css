@@ -14,7 +14,7 @@ Text Domain: andeantrip
 /* VARIABLES GLOBALES DEL SITIO */
 :root{
 	/* COLORES  */
-	--colorPrincipal:#0B7EF3;
+	--colorPrimario:#0B7EF3;
 	--colorSecundario: #D806DD;
 	--colorMenu: #1C4961;
 	--negro: #000;
@@ -85,7 +85,6 @@ h6{}
 	max-width: 192rem;
 	width: 100%;
 	margin: 0 auto;
-	position: relative;
 	overflow: hidden;
 }
 .text-center{
@@ -93,7 +92,20 @@ h6{}
 }
 .seccion{
 	width: 90%;
-	margin: 2rem auto;
+	margin: 2.5rem auto;
+}
+.boton{
+	color: var(--blanco);
+	font-size: 1.2rem;
+	padding: 1rem 2rem;
+	border-radius: 5rem;
+	font-weight: bolder;
+}
+.boton.primario{
+	background: var(--colorPrimario);
+}
+.boton.secundario{
+	background: var(--colorSecundario);
 }
 /*
 	CABECERA MENUS DE NAVEGACIÓN [PRINCIPAL Y SOCIAL]
@@ -218,7 +230,8 @@ h6{}
 	PORTADA VIDEO OR IMAGE
 */
 .media-portada{
-	height: 60vh;
+	height: 70vh;
+	position: relative;
 }
 .portada-video{
 	display: none;
@@ -228,7 +241,7 @@ h6{}
 	transform: translate(-26%, -30%);
 	z-index: -1;
 	width: 200%;
-	height: 100%;
+	height: 140%;
 	border-radius: 0 0 50% 50%;
 }
 .portada-img img{
@@ -247,7 +260,51 @@ h6{}
 	}
 }
 /*
-	PÁGINA PRINCIPAL
+	TOURS
 */
-
-
+.item{
+	margin-bottom: 5rem;
+}
+.tour-content{
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+.tour-content .tour-cabecera{
+	color: var(--blanco);
+	padding-left: 2.5rem;
+	text-transform: uppercase;
+	margin-bottom: 1.5rem;
+}
+.tour-content .tour-duracion{
+	color: #D7D6CF;
+}
+.tour-detalles{
+	width: 85%;
+	position: absolute;
+	top: calc(100% - 11.8rem);
+}
+.tour-detalles img{
+	/*  AGREGAR EL BORDER RADIUS CUANDO SE CAMBIEN LAS IMAGENES */
+}
+.tour-content .tour-extras{
+	padding: 2.2rem 2.5rem;
+	background: rgba(255, 255, 255, .9);
+	border-radius: 2.7rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0px 2.4rem 18px rgba(0, 0, 0, .15);
+}
+.tour-content .tour-extras .categorias{
+	display: flex;
+}
+.tour-content .tour-extras .categorias li{
+	margin-right: 1rem;
+}
+.tour-content .tour-extras .categorias li:last-child{
+	margin-right: 0;
+}
+/* 
+	BLOG SECTION
+*/

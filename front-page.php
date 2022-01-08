@@ -19,6 +19,7 @@
 
 		wp_nav_menu($menu_social);
 	?>
+	<!-- SECCIÓN TOURS -->
 	<section class="seccion tours-section">
 		<h2 class="titulo-section text-center">
 			Destinos Recomendados
@@ -45,18 +46,36 @@
 				data-categorias = "<?php echo strip_tags(get_the_term_list( $post->ID, 'trip', '', ' ', ''));?> "
 				data-etiquetas = "<?php echo strip_tags(get_the_tag_list('', ' ', '')); ?>"
 			>
-				<div class="tour-imagen">
+				<div class="tour-content">
 					<!-- Imagen -->
 					<?php the_post_thumbnail(); ?>
+					<div class="tour-detalles"> 
+						<div class="tour-cabecera">
+							<h3 class="tour-titulo">  <?php the_title(); ?> </h3>
+							<p> <span class="tour-duracion"> <?php the_field("duracion_tour") ?> </span> </p>
+						</div>
+						<div class="tour-extras">
+							<ul class="categorias">
+								<li>cat-1</li>
+								<li>cat-2</li>
+								<li>cat-3</li>
+							</ul>
+							<a href="<?php the_permalink(); ?>" class="ver-tour boton primario"> EXPLORAR </a>
+						</div>
+					</div>
 				</div>
-				<div class="tour-titulo"> 
-					<h3>  <?php the_title(); ?> </h3>
-					<p> <span class="tour-duracion"> <?php the_field("duracion_tour") ?> </span> </p>
-				</div>
-				
 			</article>
 			<?php endwhile; wp_reset_postdata(); ?>
 		</div> 
+		<div class="text-center">
+			<a href="" class="boton secundario">  EXPLORAR MÁS TOURS </a>
+		</div>
+	</section>
 
+	<!-- SECCIÓN BLOGS -->
+	<section class="seccion blog-section">
+		<h2 class="titulo-seccion text-center">
+			BLOG
+		</h2>
 	</section>
 <?php get_footer(); ?>

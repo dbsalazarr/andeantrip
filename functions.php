@@ -29,7 +29,8 @@
 
 		// REGISTRANDO LOS SCRIPTS JS
 		wp_register_script('andeanjs', get_template_directory_uri().'/js/principal.js', array(), 'v7.5', true);
-		wp_register_script('muuri', 'https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js', array(), 'v2.3.2', true);
+		wp_register_script('muuri-animations', 'https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js', array(), 'v2.3.2', true);
+		wp_register_script('muuri', 'https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js', array(), 'v9.5', true);
 
 
 		// AGREGANDO LOS EL JS A LA WEB
@@ -38,6 +39,7 @@
 
 		// SCRIPTS JS SOLO PARA EL HOME
 		if( is_front_page() ){
+			wp_enqueue_script("muuri-animations");
 			wp_enqueue_script("muuri");
 		}
 
@@ -114,7 +116,7 @@
 			'has_archive' => true,
 			'hierarchical' => false,
 			'menu_position' => 7,
-			'supports' => array('title','editor','thumbnail', 'excerpt'),
+			'supports' => array('title','editor','thumbnail','excerpt'),
 			'show_in_rest' => true, // Habilitar Gutenberg
 			'taxonomies' => array('category', 'post_tag'),
 			'menu_icon' => 'dashicons-airplane'
