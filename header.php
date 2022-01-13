@@ -54,7 +54,7 @@
 		 	$menu_social = array(
 		 		'theme_location' => 'menu_social',
 		 		'container' => 'nav',
-		 		'container_class' => 'menu menu-social',
+		 		'container_class' => 'menu menu-social icons-social',
 		 		'container_id' => 'menu-social',
 		 		'link_before' => '<span>',
 		 		'before_after' => '</span>'

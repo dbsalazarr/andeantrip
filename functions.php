@@ -11,6 +11,10 @@
 			'width' => 106
 		);
 		add_theme_support('custom-logo', $imagen);
+
+		// Registrando los nuevos tamaños de imagen (nombre, width, height, cut)
+		add_image_size('tour', 560, 400, true);
+		add_image_size('blog', 1024, 600, true);
 	}
 	add_action('after_setup_theme', 'setup_andean');
 

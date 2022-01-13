@@ -25,12 +25,7 @@
 			Destinos Recomendados
 		</h2>
 
-		<div class="categorias">
-			<a href="#" class="">Fines de Semana</a>
-			<a href="#" class="">Vacaciones</a>
-			<a href="#" class="">Tours en Grupos</a>
-			<a href="#" class="">Viajes Largos</a>
-		</div>
+		
 		<?php 
 			$args = array(
 				'post_type' => 'tour',
@@ -40,25 +35,48 @@
 			$tours = new WP_Query($args);
 		?>
 
+		<div class="categorias-tour">
+			<a href="#" class="activo" data-idCategoria="9">Fines de Semana</a>
+			<a href="#" class="" data-idCategoria="11">Vacaciones</a>
+			<a href="#" class="" data-idCategoria="10">Tours en Grupos</a>
+			<a href="#" class="" data-idCategoria="12">Viajes Largos</a>
+		</div>
+
 		<div class="grid" id="grid">
 			<?php while( $tours->have_posts() ) : $tours->the_post(); ?>
+
+				<?php
+					$terms = get_the_terms( $post->ID, 'trip' ); 
+					// echo "<pre>";
+					// var_dump( $terms);
+					// echo "</pre>";
+                 ?>
+
+
+
 			<article class="item"
-				data-categorias = "<?php echo strip_tags(get_the_term_list( $post->ID, 'trip', '', ' ', ''));?> "
+				data-categorias = "<?php  foreach ($terms as $term) { echo $term->term_id . ' '; }?> "
 				data-etiquetas = "<?php echo strip_tags(get_the_tag_list('', ' ', '')); ?>"
 			>
 				<div class="tour-content">
 					<!-- Imagen -->
-					<?php the_post_thumbnail(); ?>
+					<?php the_post_thumbnail('tour'); ?>
 					<div class="tour-detalles"> 
 						<div class="tour-cabecera">
 							<h3 class="tour-titulo">  <?php the_title(); ?> </h3>
 							<p> <span class="tour-duracion"> <?php the_field("duracion_tour") ?> </span> </p>
 						</div>
-						<div class="tour-extras">
+						<div class="tour-extras icons-social">
 							<ul class="categorias">
-								<li>cat-1</li>
-								<li>cat-2</li>
-								<li>cat-3</li>
+								
+								<li> <a target="_blank" class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>">
+								</a> </li>
+								
+								<li> <a target="_blank" class="twitter" href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=Una maravilloso recorrido de la mano de @andeantrip:">
+								</a></li>
+								
+								<li> <a target="_blank" class="" href="https://web.whatsapp.com/send?phone=51941002491&text=Hola Andean me interesa el siguiente recorrido: <?php the_title();?>">
+								</a> </li>
 							</ul>
 							<a href="<?php the_permalink(); ?>" class="ver-tour boton primario"> EXPLORAR </a>
 						</div>
@@ -77,5 +95,6 @@
 		<h2 class="titulo-seccion text-center">
 			BLOG
 		</h2>
+
 	</section>
 <?php get_footer(); ?>

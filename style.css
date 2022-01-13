@@ -168,7 +168,8 @@ h6{}
 .menu-social ul li:last-child{
 	margin-right: 0;
 }
-.menu-social ul li a:after{
+.menu-social ul li a:after,
+.icons-social ul li a:after{
 	display: block;
 	width: 4rem;
 	height: 4rem;
@@ -180,10 +181,11 @@ h6{}
 	font-size: 2.5rem;
 	color: var(--blanco);
 }
-.menu-social ul li a[href*="facebook.com"]:after{background: #334C8C; content: '\f09a';}
-.menu-social ul li a[href*="twitter.com"]:after{background: #00A6DE;content: '\f099';}
-.menu-social ul li a[href*="youtube.com"]:after{background: #F20000;content: '\f16a';}
-.menu-social ul li a[href*="instagram.com"]:after{background: #8F1FA3;content: '\f16d';}
+.icons-social ul li a[href*="facebook.com"]:after{background: #334C8C; content: '\f09a';}
+.icons-social ul li a[href*="twitter.com"]:after{background: #00A6DE;content: '\f099';}
+.icons-social ul li a[href*="youtube.com"]:after{background: #F20000;content: '\f16a';}
+.icons-social ul li a[href*="instagram.com"]:after{background: #8F1FA3;content: '\f16d';}
+.icons-social ul li a[href*="web.whatsapp.com"]:after{background: #01a75a;content: '\f232';}
 
 @media only screen and (min-width: 768px){
 	.bar-menu{
@@ -262,6 +264,22 @@ h6{}
 /*
 	TOURS
 */
+.categorias-tour{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.categorias-tour a{
+	font-weight: 700;
+	padding: 2rem 2rem 1rem 2rem;
+	margin-right: 2rem;
+}
+.categorias-tour a:last-child{
+	margin-right: 0;
+}
+.categorias-tour .activo{
+	border-bottom: 5px solid var(--negro);
+}
 .item{
 	margin-bottom: 5rem;
 }
@@ -284,8 +302,10 @@ h6{}
 	position: absolute;
 	top: calc(100% - 11.8rem);
 }
-.tour-detalles img{
-	/*  AGREGAR EL BORDER RADIUS CUANDO SE CAMBIEN LAS IMAGENES */
+.tour-content img{
+	border-radius: 5rem;
+	height: 25rem;
+	object-fit: cover;
 }
 .tour-content .tour-extras{
 	padding: 2.2rem 2.5rem;
