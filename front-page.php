@@ -21,7 +21,7 @@
 	?>
 	<!-- SECCIÓN TOURS -->
 	<section class="seccion tours-section">
-		<h2 class="titulo-section text-center">
+		<h2 class="titulo-seccion text-center">
 			Destinos Recomendados
 		</h2>
 
@@ -78,7 +78,7 @@
 								<li> <a target="_blank" class="" href="https://web.whatsapp.com/send?phone=51941002491&text=Hola Andean me interesa el siguiente recorrido: <?php the_title();?>">
 								</a> </li>
 							</ul>
-							<a href="<?php the_permalink(); ?>" class="ver-tour boton primario"> EXPLORAR </a>
+							<a href="<?php the_permalink(); ?>" class="ver-tour boton primario text-center"> EXPLORAR </a>
 						</div>
 					</div>
 				</div>
@@ -95,6 +95,34 @@
 		<h2 class="titulo-seccion text-center">
 			BLOG
 		</h2>
+		<?php 
 
+			$args = array(
+				'post_type' => 'post',
+				'post_per_page' => 3
+			);
+
+			$blog = new WP_Query($args);
+
+		?>
+
+		<?php  while($blog->have_posts()) :$blog->the_post();   ?>
+		<a href="<?php the_permalink(); ?>">	
+			<article class="blog-image">
+				<?php the_post_thumbnail('blog'); ?>
+				<h3 class="blog-titulo text-blanco"><?php the_title(); ?>
+				</h3>
+			</article>
+		</a>
+		<?php endwhile; wp_reset_postdata(); ?>
+		<div class="text-center" style="margin-top: 5rem;">
+			<a href="" class="boton secundario">  LEER MÁS </a>
+		</div>
+	</section>
+	<!--  SECCIÓN RECOMENDACIONES -->
+	<section class="recomendaciones-section seccion">
+		<h2 class="titulo-seccion text-center">
+			RECOMENDACIONES
+		</h2>
 	</section>
 <?php get_footer(); ?>
