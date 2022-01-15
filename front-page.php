@@ -105,16 +105,19 @@
 			$blog = new WP_Query($args);
 
 		?>
-
-		<?php  while($blog->have_posts()) :$blog->the_post();   ?>
-		<a href="<?php the_permalink(); ?>">	
-			<article class="blog-image">
-				<?php the_post_thumbnail('blog'); ?>
-				<h3 class="blog-titulo text-blanco"><?php the_title(); ?>
-				</h3>
-			</article>
-		</a>
-		<?php endwhile; wp_reset_postdata(); ?>
+		<div class="blog-content">
+			<?php $i = 1; ?>
+			<?php  while($blog->have_posts()) :$blog->the_post();   ?>
+				<article class="blog-image blog-image-<?php echo $i; ?>">
+					<?php the_post_thumbnail('blog'); ?>
+					<a class="blog-titulo" href="<?php the_permalink(); ?>">
+						<h3 class="text-blanco"><?php the_title(); ?></h3>
+					</a>
+				</article>
+			
+			<?php $i++; ?>
+			<?php endwhile; wp_reset_postdata(); ?>
+		</div>
 		<div class="text-center" style="margin-top: 5rem;">
 			<a href="" class="boton secundario">  LEER MÁS </a>
 		</div>
