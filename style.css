@@ -23,6 +23,7 @@ Text Domain: andeantrip
 
 	/* FUENTES */
 	--fuentePrincipal: "Montserrat", Arial, Helvetica, sans-serif;
+	--fuenteSecundaria: "Open Sans", Arial, Helvetica, sans-serif;
 }
 /*
 	ESTILOS GENERALES
@@ -462,3 +463,28 @@ h6{}
 /*
 	RECOMENDACIONES SECTION
 */
+.testimonio-titulo{
+	margin-bottom: 2rem;
+}
+.testimonio-details p{
+	margin-bottom: 3rem;
+	font-family: var(--fuenteSecundaria);
+	font-weight: 300;
+}
+.testimonio-details .testimonio-user{
+	display: flex;
+}
+.testimonio-details .testimonio-user img{
+	max-width: 7rem;
+	max-height: 7rem;
+	border-radius: 50%;
+	margin-right: 2rem;
+}
+.testimonio-details .testimonio-user .user-data{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;	
+}
+.testimonio-details .testimonio-user span{
+	display: block;
+}

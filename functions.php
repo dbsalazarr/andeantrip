@@ -22,6 +22,7 @@
 		// REGISTRAR ESTILO
 		wp_register_style('normalize', get_template_directory_uri().'/css/normalize.css', array(), 'v8.0.1', 'all');
 		wp_register_style('montserrat', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap', array(), 'v10.1', 'all');
+		wp_register_style('opensans', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap', array(), 'v.11.1', 'all');
 		wp_register_style('andeanstyle', get_stylesheet_uri(), array('normalize', 'montserrat'), 'v7.5', 'all');
 
 
@@ -29,6 +30,7 @@
 		// AGREGAR LOS ESTILOS A LA WEB
 		wp_enqueue_style('normalize');
 		wp_enqueue_style('montserrat');
+		wp_enqueue_style('opensans');
 		wp_enqueue_style('andeanstyle');
 
 		// REGISTRANDO LOS SCRIPTS JS
@@ -86,7 +88,9 @@
 	}
 	add_action('widgets_init', 'andean_widget');
 
-	function andean_testimonios(){
+	// CTP FOR TOURS OF ANDEAN
+
+	function andean_tours(){
 		$labels = array(
 			'name' => _x('Tours','andeantrip'),
 			'singular_name' => _x('Tours','post type singular name','Tours'),
@@ -128,9 +132,53 @@
 
 		register_post_type('tour', $args);
 	}
+	add_action('init','andean_tours');
+
+	// CPT FOR COMMENTS ON ANDEAN
+
+	function andean_testimonios(){
+		$labels = array(
+			'name' => _x('Testimonios','andeantrip'),
+			'singular_name' => _x('Testimonios','post type singular name','testimonios'),
+			'menu_name' => _x('Testimonios','admin menu','andeantrip'),
+			'name_admin_bar' => _x('Testimonio','add new on admin bar','andeantrip'),
+			'add_new' => _x('Add New Testimonio','book','andeantrip'),
+			'add_new_item' => _x('Add New Testimonios','andeantrip'),
+			'new_item' => _x('New Testimonios','andeantrip'),
+			'edit_item' => _x('Edit Testimonio','andeantrip'),
+			'view_item' => _x('View Testimonios','andeantrip'),
+			'all_items' => _x('All Testimonios','andeantrip'),
+			'search_items' => _x('Search Testimonios','andeantrip'),
+			'parent_item_colon' => _x('Parent Testimonios','andeantrip'),
+			'not_found' => _x('No Testimonios Found','andeantrip'),
+			'not_found_in_trash' => _x('No Testimonios found in Trash','andeantrip')
+		);
+
+		$args = array(
+			'labels' => $labels,
+			'description' => __('Descripcion','andeantrip'),
+			'public' => true,
+			'publicity_queryable' => true,
+			'show_ui' => true,
+			'show_in_menu' => true,
+			'query_var' => true,
+			'rewrite' => array('slug','testimonios'),
+			'capability_type' => 'post',
+			'has_archive' => true,
+			'hierarchical' => false,
+			'menu_position' => 7,
+			'supports' => array('title','editor','thumbnail'),
+			'show_in_rest' => true, // Habilitar Gutenberg
+			'taxonomies' => array('category', 'post_tag'),
+			'menu_icon' => 'dashicons-testimonial'
+		);
+
+		register_post_type('testimonios', $args);
+	}
 	add_action('init','andean_testimonios');
 
-	// Creando Taxonomias
+	// CREANDO UNA TAXONOMIA
+
 	function andean_taxonomy_trips() {
      $labels = array(
          'name'              => _x( 'Trips', 'taxonomy general name' ),

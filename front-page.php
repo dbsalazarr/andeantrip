@@ -127,5 +127,35 @@
 		<h2 class="titulo-seccion text-center">
 			RECOMENDACIONES
 		</h2>
+		<?php 
+			$args = array(
+				'post_type' => 'testimonios',
+				'post_per_page' => -1,
+				# The order by defect is DESC, that is order from highest to lowest
+			);
+
+			$testimonios = new WP_Query($args);
+		?>
+		<div class="testimonios-content">
+			<?php while( $testimonios->have_posts() ) : $testimonios->the_post(); ?>
+				<article class="testimonios-item">
+					
+					<h3 class="testimonio-titulo"> <?php the_title(); ?> </h3>
+
+					<div class="testimonio-details">
+						<?php the_content(); ?>
+
+						<div class="testimonio-user">
+							<img src="<?php the_field('testimonio_image'); ?>" alt="image-passenger">
+							<div class="user-data">
+								<span><?php the_field('testimonio_name'); ?></span>
+								<span><?php the_field('testimonio_last_name'); ?></span>
+							</div>
+						</div>
+					</div>
+				</article>
+		</div>
+
+		<?php endwhile; wp_reset_postdata(); ?>
 	</section>
 <?php get_footer(); ?>
