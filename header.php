@@ -24,18 +24,21 @@
 	 		}
 	 	}
 	 </style>
-	<header class="cabecera">
+	<header class="cabecera" id="cabecera">
 		<div class="bar-menu">
 			<div id="bar-menu">
 				<img src="<?php echo get_template_directory_uri(); ?>/media/navigation-bar.png" style="width: 70%;">
 			</div>
 		</div>
-		<div class="logo">
-			<?php 
-				if( function_exists('the_custom_logo') ) :
-					the_custom_logo();
-				endif;
-			?>
+		<div class="logo logo-movil">
+			<a href=" <?php esc_url( bloginfo("url") ); ?> ">
+				<img src="<?php echo get_template_directory_uri();?>/media/brand-andean-blank.png" alt="">
+			</a>
+		</div>
+		<div class="logo logo-escritorio">
+			<a href=" <?php esc_url( bloginfo("url") ); ?> ">
+				<img src="<?php echo get_template_directory_uri();?>/media/brand-andean-color.png" alt="">
+			</a>
 		</div>
 		<!-- Agregando el menú principal -->
 		<?php 

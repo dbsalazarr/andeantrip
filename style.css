@@ -125,13 +125,28 @@ h6{}
 	padding: 1.5rem 2rem;
 	position: relative;
 	z-index: 11;
+	transition: background .35s ease-out;
+}
+.cabecera.active{
+	background: var(--blanco);
 }
 .cabecera .logo{
 	margin-right: 2rem;
 }
+.cabecera .logo-escritorio{
+	display: none;
+}
 @media only screen and (min-width: 768px){
 	.cabecera{
 		justify-content: flex-start;
+	}
+}
+@media only screen and (min-width: 1024px){
+	.cabecera .logo-movil{
+		display: none;
+	}
+	.cabecera .logo-escritorio{
+		display: block;
 	}
 }
 .menu-principal{
@@ -459,7 +474,6 @@ h6{}
 						 "main main nd";
 	}
 }
-
 /*
 	RECOMENDACIONES SECTION
 */
@@ -488,3 +502,6 @@ h6{}
 .testimonio-details .testimonio-user span{
 	display: block;
 }
+/*
+
+*/
