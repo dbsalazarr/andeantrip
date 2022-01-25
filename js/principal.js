@@ -31,5 +31,32 @@ function menuFunctionality(){
 }
 
 function gridTours(){
-	
+	const grid = new Muuri('.grid', {
+		layout:{
+			"rounding" : false
+		}
+	})
+
+	let enlacesCategorias = document.querySelectorAll(".categorias-tour a")
+	enlacesCategorias.forEach( (enlace) => {
+		enlace.addEventListener("click", (e) => {
+			e.preventDefault()
+
+			// Eliminar la clase activo del elemento
+			let enlaceActivo = document.querySelector(".categorias-tour a.activo")
+			enlaceActivo.classList.remove("activo")
+
+			e.target.classList.add("activo")
+
+			const categoria = e.target.dataset.idcategoria;
+
+			// filtrar por categoria
+
+			// grid.filter(`[data-categorias="${categoria}"]`)
+			grid.filter( (item) => item.getElement().dataset.categorias.includes(categoria) )
+			
+
+		})
+	})
+
 }

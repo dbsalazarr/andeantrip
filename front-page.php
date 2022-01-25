@@ -36,10 +36,10 @@
 		?>
 
 		<div class="categorias-tour">
-			<a href="#" class="activo" data-idCategoria="9">Fines de Semana</a>
-			<a href="#" class="" data-idCategoria="11">Vacaciones</a>
-			<a href="#" class="" data-idCategoria="10">Tours en Grupos</a>
-			<a href="#" class="" data-idCategoria="12">Viajes Largos</a>
+			<a href="#" class="activo" data-idcategoria="9">Fines de Semana</a>
+			<a href="#" class="" data-idcategoria="11">Vacaciones</a>
+			<a href="#" class="" data-idcategoria="10">Tours en Grupos</a>
+			<a href="#" class="" data-idcategoria="12">Viajes Largos</a>
 		</div>
 
 		<div class="grid" id="grid">
