@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 	console.log("El documento esta listo para ejecutar código JS")
 	menuFunctionality()
+	gridTours()
 })
 
 function menuFunctionality(){
@@ -27,4 +28,8 @@ function menuFunctionality(){
 			imagenLogo.setAttribute("src", "http://local.andeantripmachupicchu/wp-content/themes/andean/media/brand-andean-color.png")
 		}
 	})
+}
+
+function gridTours(){
+	
 }

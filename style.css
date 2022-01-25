@@ -400,19 +400,6 @@ h6{}
 .tour-content .tour-extras .categorias li:last-child{
 	margin-right: 0;
 }
-@media only screen and (min-width: 768px){
-	.grid{
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-column-gap: 8rem;
-	}
-}
-@media only screen and (min-width: 1024px){
-	.grid{
-		grid-template-columns:  repeat(3, 1fr);
-		grid-row-gap: 4rem;
-	}
-}
 /* 
 	BLOG SECTION
 */
