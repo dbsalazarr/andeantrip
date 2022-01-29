@@ -4,7 +4,7 @@
 		<div class="portada-video">
 			
 		</div>
-		<div class="portada-img" style="background: url('<?php echo get_template_directory_uri(); ?>/media/portada-img.jpg') right top/cover no-repeat fixed">
+		<div class="portada-img" style="background: url('<?php echo get_template_directory_uri(); ?>/media/portada-img.jpg') right top/cover no-repeat">
 		</div>
 	</main>
 	<?php 
