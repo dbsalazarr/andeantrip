@@ -487,6 +487,9 @@ h6{}
 .testimonio-titulo{
 	margin-bottom: 2rem;
 }
+.testimonios-item{
+	margin-right: 2rem;
+}
 .testimonio-details p{
 	margin-bottom: 3rem;
 	font-family: var(--fuenteSecundaria);
@@ -508,6 +511,10 @@ h6{}
 }
 .testimonio-details .testimonio-user span{
 	display: block;
+}
+.bx-wrapper{
+	border: none;
+	box-shadow: none;
 }
 /*
 

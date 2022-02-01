@@ -154,8 +154,7 @@
 						</div>
 					</div>
 				</article>
-		</div>
-
 		<?php endwhile; wp_reset_postdata(); ?>
+		</div>
 	</section>
 <?php get_footer(); ?>

@@ -24,8 +24,13 @@
 		wp_register_style('montserrat', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap', array(), 'v10.1', 'all');
 		wp_register_style('opensans', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap', array(), 'v.11.1', 'all');
 		wp_register_style('andeanstyle', get_stylesheet_uri(), array('normalize', 'montserrat'), 'v7.5', 'all');
+		wp_register_style('bxSliderCSS', get_template_directory_uri().'/css/bxslider.min.css', array(), 'v.4.2.15', 'all');
 
 
+		// AGREGANDO ESTILOS CONDICIONALES AL HOME
+		if( is_front_page() ){
+			wp_enqueue_style('bxSliderCSS');
+		}
 
 		// AGREGAR LOS ESTILOS A LA WEB
 		wp_enqueue_style('normalize');
@@ -37,6 +42,8 @@
 		wp_register_script('andeanjs', get_template_directory_uri().'/js/principal.js', array(), 'v7.5', true);
 		wp_register_script('muuri-animations', 'https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js', array(), 'v2.3.2', true);
 		wp_register_script('muuri', 'https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js', array(), 'v9.5', true);
+		wp_register_script('bxSliderJS', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array(), 'v.4.2.15', true);
+		wp_register_script('carousel', get_template_directory_uri().'/js/carousel.js', array('bxSliderJS'), 'v.1.0', true);
 
 
 		// AGREGANDO LOS EL JS A LA WEB
@@ -45,8 +52,11 @@
 
 		// SCRIPTS JS SOLO PARA EL HOME
 		if( is_front_page() ){
+			wp_enqueue_script("jquery");
 			wp_enqueue_script("muuri-animations");
 			wp_enqueue_script("muuri");
+			wp_enqueue_script("bxSliderJS");
+			wp_enqueue_script("carousel");
 		}
 
 	}

@@ -54,9 +54,6 @@ function gridTours(){
 
 			// grid.filter(`[data-categorias="${categoria}"]`)
 			grid.filter( (item) => item.getElement().dataset.categorias.includes(categoria) )
-			
-
 		})
 	})
-
 }
