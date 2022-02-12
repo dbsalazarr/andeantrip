@@ -22,8 +22,6 @@ function carrusellTestimonios(minSlides, maxSlides, numberSlides){
 	let slideWidth;
 	width = document.querySelector(".recomendaciones-section").clientWidth
 	slideWidth = (width) / numberSlides;
-	console.log("el ancho es:" + width)
-	console.log("El ancho de la ventana es:" + slideWidth)
 
 	$(".testimonios-content").bxSlider({
 		'pager': false,
