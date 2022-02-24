@@ -29,7 +29,7 @@
 		<?php 
 			$args = array(
 				'post_type' => 'tour',
-				'post_per_page' => -1
+				'posts_per_page' => -1
 			);
 
 			$tours = new WP_Query($args);
