@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <article class="tour-descripcion">
+    <article class="tour-descripcion centrar">
         <header>
             <h1> <?php the_title(); ?></h1>
             <div class="tour-content-image">

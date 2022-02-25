@@ -78,15 +78,15 @@ h6{}
 /*
 	UTILITARIOS
 */
-.centrar{
-	max-width: 90%;
-	margin: 0 auto;
-}
 .contenedor-principal{
 	max-width: 192rem;
 	width: 100%;
 	margin: 0 auto;
 	overflow: hidden;
+}
+.centrar{
+	max-width: 90%;
+	margin: 0 auto;
 }
 .text-center{
 	text-align: center;
@@ -520,6 +520,13 @@ h6{}
 	TOUR DESCRIPTION
 	Estilos para mostrar el contenido de los tours
 */
-.tour-descripcion{
-	
+.tour-descripcion header{
+	margin-bottom: 20px;
+}
+.tour-descripcion header .tour-content-image{
+}
+
+
+.grid-tour article{
+	margin-bottom: 40px
 }
