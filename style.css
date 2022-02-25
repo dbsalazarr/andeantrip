@@ -526,5 +526,6 @@ h6{}
 .tour-descripcion header .tour-content-image{
 }
 .grid-tour article{
-	margin-bottom: 40px
+	margin-bottom: 40px;
+	/*Cambios resueltos desde mi pc local y subidas al servidor desde su consola*/
 }
