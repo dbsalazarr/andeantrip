@@ -14,7 +14,7 @@
             <?php the_content(); ?>
         </div>
         <div class="text-center" style="margin-top: 2.5rem;">
-            <a href="" class="boton secundario"> GALERÍA </a>
+            <a href="" class="boton secundario invertido"> GALERÍA </a>
         </div>
         <!-- 
             Contenido para la galería
@@ -25,7 +25,7 @@
             <a href="" class="boton primario">  EXPLORAR MÁS TOURS </a>
         </div>
 
-        <section class="seccion tours-section">
+        <section class="tours-section">
             <h2 class="titulo-seccion text-center">
                 Destinos Recomendados
             </h2>
