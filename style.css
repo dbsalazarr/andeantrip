@@ -19,6 +19,7 @@ Text Domain: andeantrip
 	--colorMenu: #1C4961;
 	--negro: #000;
 	--blanco: #fff;
+	--blue-light: #E1E8F8;
 
 
 	/* FUENTES */
@@ -569,4 +570,29 @@ h6{}
 }
 .kt-tabs-wrap{
 	margin-bottom: 4rem !important;
+}
+/*
+	FOOTER MENÚ
+*/
+.content-menu-footer{
+	background: var(--blue-light);
+	display: flex;
+	justify-content: space-between;
+	padding: 40px 20px;
+	border-radius: 8px;
+	flex-wrap: wrap;
+}
+.menu-footer ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+.menu-footer ul li{
+	margin-right: 20px;
+}
+.menu-footer ul li:last-child{
+	margin-right: 0;
+}
+.menu-footer ul li a,
+.content-menu-footer p{
+	font-weight:  300;
 }
