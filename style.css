@@ -575,16 +575,28 @@ h6{}
 	FOOTER MENÚ
 */
 .content-menu-footer{
-	background: var(--blue-light);
-	display: flex;
+	background: var(--blue-light);	
 	justify-content: space-between;
 	padding: 40px 20px;
 	border-radius: 8px;
 	flex-wrap: wrap;
+	text-align: center;
 }
 .menu-footer ul{
 	display: flex;
 	flex-wrap: wrap;
+}
+.menu-footer{
+	display: none;
+}
+@media only screen and (min-width: 1024px){
+	.content-menu-footer{
+		text-align: left;
+		display: flex;
+	}
+	.menu-footer{
+		display: block;
+	}
 }
 .menu-footer ul li{
 	margin-right: 20px;
