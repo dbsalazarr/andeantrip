@@ -137,6 +137,25 @@ h6{}
 	transition: background .35s ease-out;
 	padding-top: 20px;
 }
+.content-header-hero{
+	height: 450px;
+}
+.content-header-hero .title-cabecera-page h2{
+	margin-bottom: 40px;
+	font-size: 3.6rem;
+}
+.content-header-hero .title-cabecera-page,
+.content-header-hero .title-cabecera-page a{
+	color: var(--blanco);
+	font-weight: 700;
+}
+.content-header-hero .title-cabecera-page span{
+	margin-right: 20px;
+}
+.content-header-hero .title-cabecera-page span + span{
+	margin-right: 0;
+	margin-left: 20px;
+}
 .cabecera.active{
 	background: var(--blanco);
 }
@@ -179,6 +198,12 @@ h6{}
 .menu-principal ul li a{
 	display: block;
 	padding: 2rem 1rem;
+}
+.cabecera.page .menu-principal ul li a{
+	color: var(--blanco);
+}
+.cabecera.page.active .menu-principal ul li a{
+	color: var(--negro);
 }
 .menu-social,
 .menu-social.tablet{

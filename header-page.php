@@ -24,7 +24,7 @@
 	 		}
 	 	}
 	 </style>
-	<div class="conten-header-hero" style="background: url(<?php echo get_template_directory_uri(); ?>/media/machu-picchu.jpg;)">
+	<div class="content-header-hero" style="background: linear-gradient(180deg, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6) ), url(<?php echo get_template_directory_uri(); ?>/media/machu-picchu.jpg) center center;">
 		<header class="cabecera page" id="cabecera">
 			<div class="bar-menu">
 				<div id="bar-menu">
@@ -51,7 +51,7 @@
 				);
 				wp_nav_menu($menu_principal);
 			 ?>
-			 <!-- Fin menu principal -->
+			 <!-- FIN MENU PRINCIPAL -->
 		
 			 <!-- Menu Social -->
 			 <?php
@@ -67,7 +67,12 @@
 			 ?>
 			 <!-- Fin menu social -->
 		</header>
-		<div class="seccion">
+		<div class="seccion title-cabecera-page">
 			<h2> <?php the_title(); ?> </h2>
+
+			<p>
+				<span> <a href="<?php esc_url(bloginfo("url")); ?>"> Inicio </a></span> | <span> <?php the_title(); ?></span>
+			</p>
+
 		</div>
 	</div>
