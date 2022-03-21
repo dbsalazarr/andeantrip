@@ -24,45 +24,50 @@
 	 		}
 	 	}
 	 </style>
-	<header class="cabecera page" id="cabecera">
-		<div class="bar-menu">
-			<div id="bar-menu">
-				<img src="<?php echo get_template_directory_uri(); ?>/media/navigation-bar.png" style="width: 70%;">
+	<div class="conten-header-hero" style="background: url(<?php echo get_template_directory_uri(); ?>/media/machu-picchu.jpg;)">
+		<header class="cabecera page" id="cabecera">
+			<div class="bar-menu">
+				<div id="bar-menu">
+					<img src="<?php echo get_template_directory_uri(); ?>/media/navigation-bar.png" style="width: 70%;">
+				</div>
 			</div>
+			<div class="logo logo-movil">
+				<a href=" <?php esc_url( bloginfo("url") ); ?> ">
+					<img src="<?php echo get_template_directory_uri();?>/media/brand-andean-blank.png" alt="Logo en color Blanco">
+				</a>
+			</div>
+			<div class="logo logo-escritorio">
+				<a href=" <?php esc_url( bloginfo("url") ); ?> ">
+					<img src="<?php echo get_template_directory_uri();?>/media/brand-andean-blank.png" alt="Logo a colores">
+				</a>
+			</div>
+			<!-- Agregando el menú principal -->
+			<?php 
+				$menu_principal = array(
+					'theme_location' => 'menu_principal',
+					'container' => 'nav',
+					'container_class' => 'menu menu-principal',
+					'container_id' => 'menu-principal'
+				);
+				wp_nav_menu($menu_principal);
+			 ?>
+			 <!-- Fin menu principal -->
+		
+			 <!-- Menu Social -->
+			 <?php
+			 	$menu_social = array(
+			 		'theme_location' => 'menu_social',
+			 		'container' => 'nav',
+			 		'container_class' => 'menu menu-social icons-social',
+			 		'container_id' => 'menu-social',
+			 		'link_before' => '<span>',
+			 		'before_after' => '</span>'
+			 	);
+			 	wp_nav_menu($menu_social);
+			 ?>
+			 <!-- Fin menu social -->
+		</header>
+		<div class="seccion">
+			<h2> <?php the_title(); ?> </h2>
 		</div>
-		<div class="logo logo-movil">
-			<a href=" <?php esc_url( bloginfo("url") ); ?> ">
-				<img src="<?php echo get_template_directory_uri();?>/media/brand-andean-blank.png" alt="Logo en color Blanco">
-			</a>
-		</div>
-		<div class="logo logo-escritorio">
-			<a href=" <?php esc_url( bloginfo("url") ); ?> ">
-				<img src="<?php echo get_template_directory_uri();?>/media/brand-andean-blank.png" alt="Logo a colores">
-			</a>
-		</div>
-		<!-- Agregando el menú principal -->
-		<?php 
-			$menu_principal = array(
-				'theme_location' => 'menu_principal',
-				'container' => 'nav',
-				'container_class' => 'menu menu-principal',
-				'container_id' => 'menu-principal'
-			);
-			wp_nav_menu($menu_principal);
-		 ?>
-		 <!-- Fin menu principal -->
-
-		 <!-- Menu Social -->
-		 <?php
-		 	$menu_social = array(
-		 		'theme_location' => 'menu_social',
-		 		'container' => 'nav',
-		 		'container_class' => 'menu menu-social icons-social',
-		 		'container_id' => 'menu-social',
-		 		'link_before' => '<span>',
-		 		'before_after' => '</span>'
-		 	);
-		 	wp_nav_menu($menu_social);
-		 ?>
-		 <!-- Fin menu social -->
-	</header>
+	</div>
