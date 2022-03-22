@@ -59,6 +59,14 @@
 			wp_enqueue_script("carousel");
 		}
 
+		$list_pages = ['contactanos', 'nosotros'];
+		foreach ($list_pages as $page) :
+			if( is_page( $page ) ) :
+				wp_enqueue_style('bxSliderCSS');
+				wp_enqueue_script('bxSliderJS');
+			endif;
+		endforeach;
+
 	}
 	add_action('wp_enqueue_scripts', 'assets_andean');
 
