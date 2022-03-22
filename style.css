@@ -667,6 +667,8 @@ h6{}
 
 .detalles-servicios h1{
 	color: var(--blanco);
+	width: 40%;
+	margin-bottom: 80px;
 }
 .detalles-servicios h3{
 	color: var(--negro);
@@ -691,6 +693,9 @@ h6{}
 	}
 }
 @media only screen and (min-width: 1024px){
+	.content-detalles-servicios{
+		height: 600px;
+	}
 	.nuestros-servicios .item-servicio{
 		flex: 0 1 calc(25% - 20px);
 	}

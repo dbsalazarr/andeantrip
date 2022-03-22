@@ -10,7 +10,7 @@
 	?>
 	<!-- NUESTROS SERVICIOS -->
 	<section class="content-detalles-servicios" style="background: url( <?php echo $url_image; ?>) no-repeat center center/cover">
-		<div class="seccion content-nosotros detalles-servicios" >
+		<div class="seccion content-nosotros detalles-servicios">
 			<h3>SOBRE NOSOTROS</h3>
 			<h1>Detalles de nuestros servicios</h1>
 			<div class="nuestros-servicios">
@@ -30,7 +30,13 @@
 		</div>
 	</section>
 	<!-- FIN DE NUESTROS SERVICIOS -->
+
+	<!-- TESTIMONIOS DE NUESTROS CLIENTES -->
+
+
+	<!-- FIN TESTIMONIOS DE NUESTROS CLIENTES -->
 	
+
 	<!-- ULTIMOS TEMPLATES -->
 	<section class="seccion">
 		<?php get_template_part('templates/ultimos', 'viajes'); ?>
