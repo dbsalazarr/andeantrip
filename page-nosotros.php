@@ -32,7 +32,12 @@
 	<!-- FIN DE NUESTROS SERVICIOS -->
 
 	<!-- TESTIMONIOS DE NUESTROS CLIENTES -->
-
+	<section class="nuestros-testimonios">
+		<div class="seccion content-nosotros">
+			<h3>Testimonios</h3>
+			<h1>Testimonio de nuestros pasajeros</h1>
+		</div>
+	</section>
 
 	<!-- FIN TESTIMONIOS DE NUESTROS CLIENTES -->
 	
