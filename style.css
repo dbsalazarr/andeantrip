@@ -671,9 +671,6 @@ h6{}
 .detalles-servicios h3{
 	color: var(--negro);
 }
-.nuestros-servicios{
-	/*display: flex;*/
-}
 .nuestros-servicios .item-servicio{
 	display: flex;
 	flex-direction: column;
@@ -682,6 +679,21 @@ h6{}
 	padding: 20px;
 	margin-bottom: 20px;
 	text-align: center;
+}
+@media only screen and (min-width: 768px){
+	.nuestros-servicios{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.nuestros-servicios .item-servicio{
+		flex: 0 1 calc(50% - 20px);
+	}
+}
+@media only screen and (min-width: 1024px){
+	.nuestros-servicios .item-servicio{
+		flex: 0 1 calc(25% - 20px);
+	}
 }
 .nuestros-servicios .item-servicio .icon-servicios{
 	background: var(--colorPrimario);
