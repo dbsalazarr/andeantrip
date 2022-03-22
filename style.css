@@ -21,10 +21,13 @@ Text Domain: andeantrip
 	--blanco: #fff;
 	--blue-light: #E1E8F8;
 	--purple-title: #5863F8;
-
+	--blank-light: #B1B1B1;
 	/* FUENTES */
 	--fuentePrincipal: "Montserrat", Arial, Helvetica, sans-serif;
 	--fuenteSecundaria: "Open Sans", Arial, Helvetica, sans-serif;
+	--sm: 1.6rem;
+	--md: 1.8rem;
+	--lg: 2rem;
 }
 /*
 	ESTILOS GENERALES
@@ -636,6 +639,7 @@ h6{}
 .menu-footer ul li a,
 .content-menu-footer p{
 	font-weight:  300;
+	margin-bottom: 0;
 }
 
 .contenido-tours{
@@ -656,13 +660,47 @@ h6{}
 .contenido-nosotros p:first-of-type{
 	font-weight: 700;
 }
+.content-detalles-servicios{
+	/*height: 600px;*/
+	padding: 20px;
+}
+
+.detalles-servicios h1{
+	color: var(--blanco);
+}
+.detalles-servicios h3{
+	color: var(--negro);
+}
 .nuestros-servicios{
-	display: flex;
+	/*display: flex;*/
 }
 .nuestros-servicios .item-servicio{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background: var(--blanco);
+	padding: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.nuestros-servicios .item-servicio .icon-servicios{
+	background: var(--colorPrimario);
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	margin-bottom: 20px;
+}
+.nuestros-servicios .item-servicio .icon-servicios img{
+	width: auto;
+}
+.nuestros-servicios .item-servicio h4{
+	margin-bottom: 40px;
+	font-size: var(--md);
+}
+.nuestros-servicios .item-servicio p{
+	color: var(--blank-light);
 }
 /*
 	P
