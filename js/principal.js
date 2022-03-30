@@ -3,7 +3,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 	console.log("El documento esta listo para ejecutar código JS")
 	menuFunctionality()
-	gridTours()
+	if ( existsElement(".grid") )
+		gridTours()
+	
 })
 
 function menuFunctionality(){
@@ -56,4 +58,9 @@ function gridTours(){
 			grid.filter( (item) => item.getElement().dataset.categorias.includes(categoria) )
 		})
 	})
+}
+
+function existsElement( selectorElement ){
+	let element = document.querySelector( selectorElement )
+	return element != null ? true : false
 }

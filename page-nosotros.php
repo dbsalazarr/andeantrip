@@ -33,9 +33,43 @@
 
 	<!-- TESTIMONIOS DE NUESTROS CLIENTES -->
 	<section class="nuestros-testimonios">
-		<div class="seccion content-nosotros">
+		<div class="content-nosotros">
 			<h3>Testimonios</h3>
 			<h1>Testimonio de nuestros pasajeros</h1>
+			<?php 
+				$args = array(
+					'post_type' => 'testimonios',
+					'posts_per_page' =>  4
+				);
+
+				$testimonios = new WP_Query($args);
+			?>
+			<div class="testimonios-content">
+				<?php while( $testimonios->have_posts() ) : $testimonios->the_post(); ?>
+					<article class="testimonios-item">
+						
+						<div class="testimonio-details">
+							<div class="testimonio-user">
+								<img src="<?php the_field('testimonio_image'); ?>" alt="image-passenger">
+								<div class="user-data">
+									<span><?php the_field('testimonio_name'); the_field('testimonio_last_name');?></span>
+									<span> <?php the_title(); ?> </span>
+								</div>	
+							</div>
+
+							<div><?php the_content(); ?></div>
+
+						</div>
+					</article>
+				<?php endwhile; wp_reset_postdata(); ?>
+			</div>
+		</div>
+		<div class="image-testimonios-nosotros">
+			<?php 
+				$img_nosotros_testimonios = get_field("testimonios_image");
+				$url_image_nosotros = $img_nosotros_testimonios['url'];
+			?>
+			<img src="<?php echo $url_image_nosotros; ?>" alt="Testimonios de nuestros pasajeros">
 		</div>
 	</section>
 

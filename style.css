@@ -720,5 +720,38 @@ h6{}
 	color: var(--blank-light);
 }
 /*
-	P
+	NUESTROS TESTIMONIOS
 */
+.nuestros-testimonios{
+	display: flex;
+	height: 50rem;
+}
+
+.nuestros-testimonios .content-nosotros{
+	width: 80%;
+	padding: 11rem;
+}
+.nuestros-testimonios .image-testimonios-nosotros{
+	width: 50%;
+}
+.nuestros-testimonios .image-testimonios-nosotros img{
+	height: 100%;
+	object-fit: cover;
+}
+.nuestros-testimonios .user-data span:nth-child(1){
+	font-weight: 700;
+	margin-bottom: 1.6rem;
+	font-size: var(--md);
+	font-family: var(--fuenteSecundaria);
+}
+.nuestros-testimonios .user-data span + span{
+	color: var(--blank-light);
+	font-weight: 700;
+}
+.nuestros-testimonios .testimonio-user{
+	margin-bottom: 1.6rem;
+}
+.nuestros-testimonios .testimonio-user + div{
+	font-weight: 700;
+	width: 50%;
+}
