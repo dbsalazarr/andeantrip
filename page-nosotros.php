@@ -12,7 +12,7 @@
 	<section class="content-detalles-servicios" style="background: url( <?php echo $url_image; ?>) no-repeat center center/cover">
 		<div class="seccion content-nosotros detalles-servicios">
 			<h3>SOBRE NOSOTROS</h3>
-			<h1>Detalles de nuestros servicios</h1>
+			<h1>Detalles de <br> nuestros servicios</h1>
 			<div class="nuestros-servicios">
 				<?php 
 					$html_mark = '';

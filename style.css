@@ -667,7 +667,6 @@ h6{}
 
 .detalles-servicios h1{
 	color: var(--blanco);
-	width: 40%;
 	margin-bottom: 80px;
 }
 .detalles-servicios h3{
@@ -723,16 +722,17 @@ h6{}
 	NUESTROS TESTIMONIOS
 */
 .nuestros-testimonios{
-	display: flex;
-	height: 50rem;
+	/*display: flex;*/
+	/*height: 50rem;*/
 }
 
-.nuestros-testimonios .content-nosotros{
-	width: 80%;
-	padding: 11rem;
+.nuestros-testimonios .content-nosotros{	
+	/*
+	width: 80%;*/
+	padding: 2rem;
 }
 .nuestros-testimonios .image-testimonios-nosotros{
-	width: 50%;
+	/*width: 50%;*/
 }
 .nuestros-testimonios .image-testimonios-nosotros img{
 	height: 100%;
@@ -754,4 +754,11 @@ h6{}
 .nuestros-testimonios .testimonio-user + div{
 	font-weight: 700;
 	width: 50%;
+}
+.nuestros-testimonios .testimonio-details p{
+	margin-bottom: 0
+}
+/* NUESTROS TESTIMONIOS BXSLIDER  */
+.nuestros-testimonios .bx-pager{
+	text-align: left;
 }
