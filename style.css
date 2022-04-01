@@ -13,7 +13,9 @@ Text Domain: andeantrip
 
 /* VARIABLES GLOBALES DEL SITIO */
 :root{
-	/* COLORES  */
+	/*
+		COLORES
+	*/
 	--colorPrimario:#0B7EF3;
 	--colorSecundario: #D806DD;
 	--colorMenu: #1C4961;
@@ -24,12 +26,19 @@ Text Domain: andeantrip
 	--blank-light: #B1B1B1;
 	--pager-bxslider: #d1d1d1;
 	--pager-bxslider-action: #5863F8;
-	/* FUENTES */
+	/*
+		FUENTES
+	*/
 	--fuentePrincipal: "Montserrat", Arial, Helvetica, sans-serif;
 	--fuenteSecundaria: "Open Sans", Arial, Helvetica, sans-serif;
 	--sm: 1.6rem;
 	--md: 1.8rem;
 	--lg: 2rem;
+	/*
+		BORDER SIZE
+	*/
+	--size-figures: 1.2rem;
+
 }
 /*
 	ESTILOS GENERALES
@@ -760,7 +769,14 @@ h6{}
 .nuestros-testimonios .testimonio-details p{
 	margin-bottom: 0
 }
-/* NUESTROS TESTIMONIOS BXSLIDER  */
+/*
+	NUESTROS TESTIMONIOS BXSLIDER
+*/
+.nuestros-testimonios .bx-controls-direction{
+	position: absolute;
+	top: 117%;
+	left: calc(100% - 4rem);
+}
 .bx-wrapper .bx-pager{
 	text-align: left;
 }
@@ -771,4 +787,31 @@ h6{}
 .bx-wrapper .bx-pager.bx-default-pager a:focus,
 .bx-wrapper .bx-pager.bx-default-pager a:hover{
 	background: var(--pager-bxslider-action);
+}
+.nuestros-testimonios .bx-wrapper .bx-controls-direction a{
+	background: var(--colorPrimario);
+	width: 6rem;
+	height: 6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nuestros-testimonios .bx-wrapper .bx-controls-direction a::after{
+	content: '';
+	display: block;
+	width: 0px;
+	height: 0px;
+}
+.nuestros-testimonios .bx-wrapper .bx-prev{left: -60px;}
+.nuestros-testimonios .bx-wrapper .bx-next{right: -60px;}
+.nuestros-testimonios .bx-wrapper a.bx-prev::after{
+	border-top: var(--size-figures) solid transparent;
+	border-bottom: var(--size-figures) solid transparent;
+	border-right: var(--size-figures) solid var(--blanco);
+
+}
+.nuestros-testimonios .bx-wrapper a.bx-next::after{
+	border-top: var(--size-figures) solid transparent;
+	border-bottom: var(--size-figures) solid transparent;
+	border-left: var(--size-figures) solid var(--blanco);
 }
