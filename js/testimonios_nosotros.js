@@ -12,7 +12,6 @@ function testimoniosSlider(){
 	halfWindow = widthWindow / 2
 	console.log(widthWindow)
 	$(".testimonios-content").bxSlider({
-		// slideWidth: halfWindow
 	})
 }
 

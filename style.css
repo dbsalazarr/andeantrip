@@ -22,6 +22,8 @@ Text Domain: andeantrip
 	--blue-light: #E1E8F8;
 	--purple-title: #5863F8;
 	--blank-light: #B1B1B1;
+	--pager-bxslider: #d1d1d1;
+	--pager-bxslider-action: #5863F8;
 	/* FUENTES */
 	--fuentePrincipal: "Montserrat", Arial, Helvetica, sans-serif;
 	--fuenteSecundaria: "Open Sans", Arial, Helvetica, sans-serif;
@@ -759,6 +761,14 @@ h6{}
 	margin-bottom: 0
 }
 /* NUESTROS TESTIMONIOS BXSLIDER  */
-.nuestros-testimonios .bx-pager{
+.bx-wrapper .bx-pager{
 	text-align: left;
+}
+.bx-wrapper .bx-pager.bx-default-pager a{
+	background: var(--pager-bxslider);
+}
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus,
+.bx-wrapper .bx-pager.bx-default-pager a:hover{
+	background: var(--pager-bxslider-action);
 }
