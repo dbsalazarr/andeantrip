@@ -1,3 +1,3 @@
 <?php 
-	echo "Saludos desde Ultimos viajes "
+	echo "Bienvenido a los ultimos viajes realizados por la agencia";
 ?>
