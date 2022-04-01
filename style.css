@@ -13,18 +13,32 @@ Text Domain: andeantrip
 
 /* VARIABLES GLOBALES DEL SITIO */
 :root{
-	/* COLORES  */
+	/*
+		COLORES
+	*/
 	--colorPrimario:#0B7EF3;
 	--colorSecundario: #D806DD;
 	--colorMenu: #1C4961;
 	--negro: #000;
 	--blanco: #fff;
 	--blue-light: #E1E8F8;
-
-
-	/* FUENTES */
+	--purple-title: #5863F8;
+	--blank-light: #B1B1B1;
+	--pager-bxslider: #d1d1d1;
+	--pager-bxslider-action: #5863F8;
+	/*
+		FUENTES
+	*/
 	--fuentePrincipal: "Montserrat", Arial, Helvetica, sans-serif;
 	--fuenteSecundaria: "Open Sans", Arial, Helvetica, sans-serif;
+	--sm: 1.6rem;
+	--md: 1.8rem;
+	--lg: 2rem;
+	/*
+		BORDER SIZE
+	*/
+	--size-figures: 1.2rem;
+
 }
 /*
 	ESTILOS GENERALES
@@ -56,6 +70,9 @@ img{
 	width: 100%;
 	max-width: 100%;
 	height: auto;
+}
+p{
+	margin-bottom: 20px;
 }
 h1{}
 h2{}
@@ -633,4 +650,186 @@ h6{}
 .menu-footer ul li a,
 .content-menu-footer p{
 	font-weight:  300;
+	margin-bottom: 0;
+}
+
+.contenido-tours{
+	font-family: var(--fuenteSecundaria);
+}
+/*
+	PAGE - NOSOTROS
+*/
+.content-nosotros h1{
+	margin-top: 0;
+	font-size: 4.8rem;
+}
+.content-nosotros h3{
+	text-transform: uppercase;
+	font-size: 2rem;
+	color: var(--purple-title);
+}
+.contenido-nosotros p:first-of-type{
+	font-weight: 700;
+}
+.content-detalles-servicios{
+	/*height: 600px;*/
+	padding: 20px;
+}
+
+.detalles-servicios h1{
+	color: var(--blanco);
+	margin-bottom: 80px;
+}
+.detalles-servicios h3{
+	color: var(--negro);
+}
+.nuestros-servicios .item-servicio{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: var(--blanco);
+	padding: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+@media only screen and (min-width: 768px){
+	.nuestros-servicios{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.nuestros-servicios .item-servicio{
+		flex: 0 1 calc(50% - 20px);
+	}
+}
+@media only screen and (min-width: 1024px){
+	.nuestros-servicios .item-servicio{
+		flex: 0 1 calc(25% - 20px);
+	}
+}
+.nuestros-servicios .item-servicio .icon-servicios{
+	background: var(--colorPrimario);
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	margin-bottom: 20px;
+}
+.nuestros-servicios .item-servicio .icon-servicios img{
+	width: auto;
+}
+.nuestros-servicios .item-servicio h4{
+	margin-bottom: 40px;
+	font-size: var(--md);
+}
+.nuestros-servicios .item-servicio p{
+	color: var(--blank-light);
+}
+/*
+	NUESTROS TESTIMONIOS
+*/
+
+
+.nuestros-testimonios .content-nosotros{	
+	padding: 2rem;
+}
+.nuestros-testimonios .image-testimonios-nosotros img{
+	height: 100%;
+	max-height: 50rem;
+	object-fit: cover;
+}
+@media only screen and (min-width: 768px){
+	.nuestros-testimonios .content-nosotros{
+		padding: 6rem;
+	}
+}
+@media only screen and (min-width: 1024px){
+	.nuestros-testimonios{
+		display: flex;
+		height: 50rem;
+	}
+	.nuestros-testimonios .content-nosotros{
+		width: 70%;
+		padding: 11rem;
+	}
+	.nuestros-testimonios .image-testimonios-nosotros{
+		width: 30%;
+	}
+}
+.nuestros-testimonios .user-data span:nth-child(1){
+	font-weight: 700;
+	margin-bottom: 1.6rem;
+	font-size: var(--md);
+	font-family: var(--fuenteSecundaria);
+}
+.nuestros-testimonios .user-data span + span{
+	color: var(--blank-light);
+	font-weight: 700;
+}
+.nuestros-testimonios .testimonio-user{
+	margin-bottom: 1.6rem;
+}
+.nuestros-testimonios .testimonio-user + div{
+	font-weight: 700;
+	/*width: 50%;*/
+}
+@media only screen and (min-width: 1400px){
+	.nuestros-testimonios .testimonio-user + div{
+		width: 50%;
+	}
+}
+.nuestros-testimonios .testimonio-details p{
+	margin-bottom: 0
+}
+/*
+	NUESTROS TESTIMONIOS BXSLIDER
+*/
+.nuestros-testimonios .bx-controls-direction{
+	position: absolute;
+	top: 117%;
+	left: calc(100% - 4rem);
+}
+@media only screen and (min-widtH: 1024px){
+	.nuestros-testimonios .bx-controls-direction{
+		display: none;
+	}
+}
+.bx-wrapper .bx-pager{
+	text-align: left;
+}
+.bx-wrapper .bx-pager.bx-default-pager a{
+	background: var(--pager-bxslider);
+}
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus,
+.bx-wrapper .bx-pager.bx-default-pager a:hover{
+	background: var(--pager-bxslider-action);
+}
+.nuestros-testimonios .bx-wrapper .bx-controls-direction a{
+	background: var(--colorPrimario);
+	width: 6rem;
+	height: 6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nuestros-testimonios .bx-wrapper .bx-controls-direction a::after{
+	content: '';
+	display: block;
+	width: 0px;
+	height: 0px;
+}
+.nuestros-testimonios .bx-wrapper .bx-prev{left: -60px;}
+.nuestros-testimonios .bx-wrapper .bx-next{right: -60px;}
+.nuestros-testimonios .bx-wrapper a.bx-prev::after{
+	border-top: var(--size-figures) solid transparent;
+	border-bottom: var(--size-figures) solid transparent;
+	border-right: var(--size-figures) solid var(--blanco);
+
+}
+.nuestros-testimonios .bx-wrapper a.bx-next::after{
+	border-top: var(--size-figures) solid transparent;
+	border-bottom: var(--size-figures) solid transparent;
+	border-left: var(--size-figures) solid var(--blanco);
 }

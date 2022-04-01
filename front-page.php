@@ -130,7 +130,7 @@
 		<?php 
 			$args = array(
 				'post_type' => 'testimonios',
-				'post_per_page' => -1,
+				'posts_per_page' => -1,
 				# The order by defect is DESC, that is order from highest to lowest
 			);
 
