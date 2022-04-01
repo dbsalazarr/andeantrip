@@ -74,11 +74,8 @@
 	</section>
 
 	<!-- FIN TESTIMONIOS DE NUESTROS CLIENTES -->
-	
-
-	<!-- ULTIMOS TEMPLATES -->
-	<section class="seccion">
 		<?php get_template_part('templates/ultimos', 'viajes'); ?>
-	</section>
-	<!-- FIN ULTIMOS TEMPLATES -->
+	<!-- ULTIMOS VIAJES REALIZADOS POR NUESTROS CLIENTES -->
+	
+	<!-- FIN ULTIMOS VIAJES REALIZADOS POR NUESTROS CLIENTES -->
 <?php get_footer(); ?>

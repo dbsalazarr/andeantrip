@@ -70,6 +70,7 @@ img{
 	width: 100%;
 	max-width: 100%;
 	height: auto;
+	display: block;
 }
 p{
 	margin-bottom: 20px;
@@ -832,4 +833,50 @@ h6{}
 	border-top: var(--size-figures) solid transparent;
 	border-bottom: var(--size-figures) solid transparent;
 	border-left: var(--size-figures) solid var(--blanco);
+}
+/*
+	TEMPLATE: ULTIMOS VIAJES
+*/
+.destino-destacado{
+	position: relative;
+}
+.destino-destacado::after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, .25);
+	opacity: 0;
+	transition: opacity .25s ease-in;
+	z-index: 1;
+}
+.destino-destacado:hover::after{
+	opacity: 1;
+}
+.destino-destacado .titulo-destino{
+	position: absolute;
+	left: 2rem;
+	bottom: 2rem;
+	z-index: 2;
+}
+.destino-destacado .titulo-destino a{
+	color: var(--blanco);
+}
+@media only screen and (min-width: 768px){
+	.destinos-content{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.destinos-content .destino-destacado{
+		flex: 0 1 50%;
+	}
+}
+@media only screen and (min-width: 1024px){
+	.destinos-content .destino-destacado{
+		flex: 0 1 25%;
+	}
 }
