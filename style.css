@@ -703,9 +703,6 @@ h6{}
 	}
 }
 @media only screen and (min-width: 1024px){
-	.content-detalles-servicios{
-		height: 600px;
-	}
 	.nuestros-servicios .item-servicio{
 		flex: 0 1 calc(25% - 20px);
 	}
@@ -732,22 +729,33 @@ h6{}
 /*
 	NUESTROS TESTIMONIOS
 */
-.nuestros-testimonios{
-	/*display: flex;*/
-	/*height: 50rem;*/
-}
+
 
 .nuestros-testimonios .content-nosotros{	
-	/*
-	width: 80%;*/
 	padding: 2rem;
-}
-.nuestros-testimonios .image-testimonios-nosotros{
-	/*width: 50%;*/
 }
 .nuestros-testimonios .image-testimonios-nosotros img{
 	height: 100%;
+	max-height: 50rem;
 	object-fit: cover;
+}
+@media only screen and (min-width: 768px){
+	.nuestros-testimonios .content-nosotros{
+		padding: 6rem;
+	}
+}
+@media only screen and (min-width: 1024px){
+	.nuestros-testimonios{
+		display: flex;
+		height: 50rem;
+	}
+	.nuestros-testimonios .content-nosotros{
+		width: 70%;
+		padding: 11rem;
+	}
+	.nuestros-testimonios .image-testimonios-nosotros{
+		width: 30%;
+	}
 }
 .nuestros-testimonios .user-data span:nth-child(1){
 	font-weight: 700;
@@ -764,7 +772,12 @@ h6{}
 }
 .nuestros-testimonios .testimonio-user + div{
 	font-weight: 700;
-	width: 50%;
+	/*width: 50%;*/
+}
+@media only screen and (min-width: 1400px){
+	.nuestros-testimonios .testimonio-user + div{
+		width: 50%;
+	}
 }
 .nuestros-testimonios .testimonio-details p{
 	margin-bottom: 0
@@ -776,6 +789,11 @@ h6{}
 	position: absolute;
 	top: 117%;
 	left: calc(100% - 4rem);
+}
+@media only screen and (min-widtH: 1024px){
+	.nuestros-testimonios .bx-controls-direction{
+		display: none;
+	}
 }
 .bx-wrapper .bx-pager{
 	text-align: left;
