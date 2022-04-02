@@ -1,4 +1,7 @@
 <?php 
+
+	require get_template_directory() . '/inc/aditionals.php';
+
 	function setup_andean(){
 		// permite la utilización de una imagen para cada entrada 
 		add_theme_support('post-thumbnails');

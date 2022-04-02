@@ -19,26 +19,22 @@
 				<div class="descripcion-tour">
 					<span>Cusco</span>
 					<h3> <?php the_title(); ?> </h3>
-					<?php 
-						$excerpt = get_the_excerpt(); 
-						echo $excerpt;
-						echo "<br>";
-						echo "<br>";
-						$excerpt = substr( $excerpt, 0, 60 ); // Only display first 260 characters of excerpt
-						echo $excerpt;
-						echo "<br>";
-						echo "<br>";
-						$result = substr( $excerpt, 0, strrpos( $excerpt, ' ' ) );
-						echo $result;
-						// CHANGE THE FUNCTION TO SHOW ONLY THE 20 FIRST WORDS OF THE EXCERPT
-					?>
+					<p>
+						<?php 
+							$excerpt = get_the_excerpt(); 
+							echo cut_text_for_words($excerpt, 20);
+						?>
+					</p>
 
 					<!-- <a href="<?php the_permalink(); ?> " class="boton primario"> DESCUBRIR MÁS </a> -->
+
 				</div>
 
 			</article>
 
 			<?php endwhile; wp_reset_postdata(); ?>
+			<?php echo get_template_directory(); ?>
+			<?php echo get_template_directory_uri(); ?>
 		</div>
 	</section>
 <?php get_footer(); ?>
