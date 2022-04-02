@@ -16,7 +16,7 @@ Text Domain: andeantrip
 	/*
 		COLORES
 	*/
-	--colorPrimario:#0B7EF3;
+	--colorPrimario: #0B7EF3;
 	--colorSecundario: #D806DD;
 	--colorMenu: #1C4961;
 	--negro: #000;
@@ -26,6 +26,11 @@ Text Domain: andeantrip
 	--blank-light: #B1B1B1;
 	--pager-bxslider: #d1d1d1;
 	--pager-bxslider-action: #5863F8;
+	--form-background: #F8F8F8;
+	--border-color-form: #E8E8E8;
+	--placeholder-color-form: #CECECE;
+	--color-text-form: #333;
+
 	/*
 		FUENTES
 	*/
@@ -673,10 +678,8 @@ h6{}
 	font-weight: 700;
 }
 .content-detalles-servicios{
-	/*height: 600px;*/
 	padding: 20px;
 }
-
 .detalles-servicios h1{
 	color: var(--blanco);
 	margin-bottom: 80px;
@@ -730,8 +733,6 @@ h6{}
 /*
 	NUESTROS TESTIMONIOS
 */
-
-
 .nuestros-testimonios .content-nosotros{	
 	padding: 2rem;
 }
@@ -879,4 +880,37 @@ h6{}
 	.destinos-content .destino-destacado{
 		flex: 0 1 25%;
 	}
+}
+/*
+	FORMULARIO DE CONTACTO
+*/
+.nuestra-ubicacion .contact-icon{
+	margin-bottom: 2rem;
+}
+.nuestra-ubicacion .contact-icon + h4{
+	margin-bottom: 2rem;
+}
+.formulario-contacto input,
+.formulario-contacto textarea{
+	width: 100%;
+	background: var(--form-background);
+	border: 1px solid var(--border-color-form);
+	padding: 2rem 1.6rem;
+	color: var(--color-text-form);
+}
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus{
+	outline: none;
+}
+.formulario-contacto input[type="submit"]{
+	background: var(--colorPrimario);
+	color: var(--blanco);
+	margin-top: 2rem;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--placeholder-color-form);;
+  opacity: 1; /* Firefox */
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--placeholder-color-form);;
 }
