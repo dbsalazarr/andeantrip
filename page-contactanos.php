@@ -9,7 +9,7 @@
 			echo do_shortcode(' [contact-form-7 id="109" title="Contact form 1"] ');
 		?>
 	</section>
-	<section class="seccion">
-			New content to add
-	</section>
+	<?php 
+		get_template_part("templates/ultimos","viajes");
+	?>
 <?php get_footer(); ?>
