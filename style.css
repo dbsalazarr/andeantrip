@@ -938,3 +938,8 @@ h6{}
 		grid-area: send;
 	}
 }
+@media only screen and (min-width: 1200px){
+	.formulario-contacto{
+		grid-template-columns: 60% 40%;
+	}
+}
