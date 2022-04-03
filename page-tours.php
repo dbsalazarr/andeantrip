@@ -6,7 +6,8 @@
 		<?php 
 			$args = array(
 				'post_type' => 'tour',
-				'posts_per_page' => -1
+				'posts_per_page' => -1,
+				'order' => 'ASC'
 			);
 			$tours = new WP_Query($args);
 		?>
@@ -15,9 +16,9 @@
 				while( $tours->have_posts() ): $tours->the_post();
 			?>
 			<article class="tour">
-				<?php the_post_thumbnail('tour'); ?>
+				<?php the_post_thumbnail('blog'); ?>
 				<div class="descripcion-tour">
-					<span>Cusco</span>
+					<span> Cusco </span>
 					<h3> <?php the_title(); ?> </h3>
 					<p>
 						<?php 
@@ -26,15 +27,17 @@
 						?>
 					</p>
 
-					<!-- <a href="<?php the_permalink(); ?> " class="boton primario"> DESCUBRIR MÁS </a> -->
+					<a href="<?php the_permalink(); ?> " class="boton primario"> DESCUBRIR MÁS </a>
 
 				</div>
 
 			</article>
 
 			<?php endwhile; wp_reset_postdata(); ?>
-			<?php echo get_template_directory(); ?>
-			<?php echo get_template_directory_uri(); ?>
 		</div>
 	</section>
+
+	<?php 
+		get_template_part("templates/ultimos", "viajes");
+	?>
 <?php get_footer(); ?>

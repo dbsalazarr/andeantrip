@@ -127,6 +127,7 @@ h6{}
 }
 .boton{
 	color: var(--blanco);
+	display: inline-block;
 	font-size: 1.2rem;
 	padding: 1rem 2rem;
 	border-radius: 5rem;
@@ -941,5 +942,63 @@ h6{}
 @media only screen and (min-width: 1200px){
 	.formulario-contacto{
 		grid-template-columns: 60% 40%;
+	}
+}
+/*
+	TOURS PAGE
+*/
+.tour{
+	background: var(--form-background);
+	margin-bottom: 2rem;
+}
+.tour .descripcion-tour{
+	padding: 2rem;
+	text-align: right;
+	margin-bottom: 2rem;
+}
+.tour .descripcion-tour > *{
+	text-align: left;
+}
+.tour .descripcion-tour span{
+	color: var(--pager-bxslider-action);
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: .7rem;
+	display: block;
+}
+.tour .descripcion-tour h3{
+	color: var(--negro);
+	text-transform: none;
+	margin-bottom: .7rem;
+}
+.tour .descripcion-tour p{
+	color: var(--blank-light);
+	width: 70%;
+}
+.tour .descripcion-tour a{
+	text-align: right;
+	padding: 1.6rem 2rem;
+	box-shadow: 0px 3px 42px var(--colorPrimario);
+	margin-bottom: .6rem;
+}
+@media only screen and (min-width: 768px){
+	.tour{
+		display: grid;
+		grid-template-columns: 30% 70%;
+		min-height: 17rem;
+	}
+	.tour img{
+		height: 100%;
+		object-fit: cover;
+	}
+}
+@media only screen and (min-width: 1024px){
+	.tours-content{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1.6rem;
+	}
+	.tour{
+		margin-bottom: 0;
 	}
 }
