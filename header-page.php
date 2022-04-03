@@ -68,7 +68,11 @@
 			 <!-- Fin menu social -->
 		</header>
 		<div class="seccion title-cabecera-page">
-			<h2> <?php the_title(); ?> </h2>
+			<?php   if ( is_home() ) :  ?>
+				<h2> Blog </h2>
+			<?php else : ?>
+				<h2> <?php the_title(); ?> </h2>
+			<?php endif; ?>
 
 			<p>
 				<span> <a href="<?php esc_url(bloginfo("url")); ?>"> Inicio </a></span> | <span> <?php the_title(); ?></span>
