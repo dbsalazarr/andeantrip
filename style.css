@@ -947,6 +947,11 @@ h6{}
 /*
 	TOURS PAGE
 */
+@media only screen and (min-width: 1024px){
+	.seccion.nuestros-tours{
+		width: 80%;
+	}
+}
 .tour{
 	background: var(--form-background);
 	margin-bottom: 2rem;
