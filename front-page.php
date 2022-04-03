@@ -1,11 +1,16 @@
 <?php get_header(); ?>
 	<main class="media-portada">
-		<!-- Espacio para el video -->
+		
+		<!-- VIDEO OR SLIDER -->
 		<div class="portada-video">
 			
 		</div>
+		<!-- FIN VIDEO OR SLIDER -->
+
+		<!--  PORTADA IMG -->
 		<div class="portada-img" style="background: url('<?php echo get_template_directory_uri(); ?>/media/portada-img.jpg') right top/cover no-repeat">
 		</div>
+		<!-- FIN PORTADA IMG -->
 	</main>
 	<?php 
 		$menu_social = array(

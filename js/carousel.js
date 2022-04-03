@@ -16,6 +16,9 @@ $(document).ready( () => {
 			carrusellTestimonios(1, 1, 1)
 		}
 	})
+
+	sliderHome()
+
 });
 
 function carrusellTestimonios(minSlides, maxSlides, numberSlides){
@@ -30,4 +33,9 @@ function carrusellTestimonios(minSlides, maxSlides, numberSlides){
         'maxSlides': maxSlides,
         'minSlides': minSlides
 	});
+}
+
+// Slider para la página de inicio
+function sliderHome(){
+	
 }
