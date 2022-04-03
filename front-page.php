@@ -3,7 +3,12 @@
 		
 		<!-- VIDEO OR SLIDER -->
 		<div class="portada-video">
-			
+			<div class="slider-home">
+				<img src="<?php echo get_template_directory_uri(); ?>/media/slider/machupicchu-glorioso.jpg " alt="slider #1">
+				<img src="<?php echo get_template_directory_uri(); ?>/media/slider/centro-cusco.jpg " alt="slider #2">
+				<img src="<?php echo get_template_directory_uri(); ?>/media/slider/valle-sagrado-de-los-incas.jpg" alt="slider #3">
+				<img src="<?php echo get_template_directory_uri(); ?>/media/slider/ventana-machupicchu.jpg" alt="slider #4">
+			</div>
 		</div>
 		<!-- FIN VIDEO OR SLIDER -->
 

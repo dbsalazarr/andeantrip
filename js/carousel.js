@@ -37,5 +37,8 @@ function carrusellTestimonios(minSlides, maxSlides, numberSlides){
 
 // Slider para la página de inicio
 function sliderHome(){
-	
+	$(".slider-home").bxSlider({
+		pager: false,
+		controls: true
+	});
 }
