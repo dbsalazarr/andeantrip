@@ -17,7 +17,7 @@
 
 		// Registrando los nuevos tamaños de imagen (nombre, width, height, cut)
 		// Nuevo tamaño para las imagenes de tour 750 x 530
-		add_image_size('tour', 560, 400, true);
+		add_image_size('tour', 750, 530, true);
 		add_image_size('blog', 1024, 600, true);
 	}
 	add_action('after_setup_theme', 'setup_andean');
