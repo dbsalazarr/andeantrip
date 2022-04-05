@@ -164,6 +164,9 @@ h6{}
 .content-header-hero{
 	height: 450px;
 }
+.content-header-hero-tour{
+	height: 20rem;
+}
 .content-header-hero .title-cabecera-page h2{
 	margin-bottom: 40px;
 	font-size: 3.6rem;
@@ -584,6 +587,8 @@ h6{}
 }
 .tour-descripcion header .tour-content-image img{
 	margin-bottom: 2rem;
+	border-radius: 12px;
+	box-shadow: 0px 3px 20px rgba(0, 0, 0, .25);
 }
 .grid-tour article{
 	margin-bottom: 40px;
@@ -602,6 +607,14 @@ h6{}
 		flex: 1 0 60%;
 		margin-right: 2rem;
 	}
+	.tour-descripcion header .tour-text-image{
+		display: flex;
+		align-items: center;
+	}
+	.tour-text{
+		width: 70%;
+		margin: 0 auto;
+	}
 }
 @media only screen and (min-width: 1200px){
 	.grid-tour{
@@ -610,16 +623,6 @@ h6{}
 }
 .tour-text p{
 	margin-bottom: 2rem;
-}
-.kt-tabs-wrap .wp-block-kadence-tab{
-	padding: 0 !important;
-	padding-top: 2rem !important; 
-}
-.kt-tabs-content-wrap > .wp-block-kadence-tab{
-	border: 0px solid transparent !important;
-}
-.kt-tabs-wrap{
-	margin-bottom: 4rem !important;
 }
 /*
 	FOOTER MENÚ
@@ -1006,4 +1009,28 @@ h6{}
 	.tour{
 		margin-bottom: 0;
 	}
+}
+
+/*
+	REBUILD OF KADANCE STYLES
+*/
+.kt-tabs-wrap .wp-block-kadence-tab{
+	padding: 0 !important;
+	padding-top: 2rem !important; 
+}
+.kt-tabs-content-wrap > .wp-block-kadence-tab{
+	border: 0px solid transparent !important;
+}
+.kt-tabs-wrap{
+	margin-bottom: 4rem !important;
+}
+.wp-block-kadence-tabs .kt-tabs-id_564f6a-16 > .kt-tabs-title-list li .kt-tab-title{
+	background: var(--blanco) !important;
+	padding: 1.2rem 3.2rem 1rem 0 !important;
+}
+.wp-block-kadence-tabs .kt-tabs-id_564f6a-16 > .kt-tabs-title-list li.kt-tab-title-active .kt-tab-title{
+	background: var(--blanco) !important;
+	color: var(--negro) !important;
+	border-bottom: 3px solid var(--negro) !important;
+	padding: 1.2rem 3.2rem 1rem 0;
 }

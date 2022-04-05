@@ -16,6 +16,7 @@
 		add_theme_support('custom-logo', $imagen);
 
 		// Registrando los nuevos tamaños de imagen (nombre, width, height, cut)
+		// Nuevo tamaño para las imagenes de tour 960 x 700
 		add_image_size('tour', 560, 400, true);
 		add_image_size('blog', 1024, 600, true);
 	}

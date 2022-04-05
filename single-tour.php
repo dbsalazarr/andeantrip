@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header('tour'); ?>
     <article class="tour-descripcion centrar">
         <header>
             <h1> <?php the_title(); ?></h1>
