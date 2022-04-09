@@ -391,6 +391,9 @@ h6{}
 .andean-form-content .search-form input[type="submit"]{
 	border: none;
 }
+.andean-form-content .search-form input:focus{
+	outline: none;
+}
 /*
 	TOURS
 */
