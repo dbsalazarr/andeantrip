@@ -343,7 +343,7 @@ h6{}
 		height: 100%;
 	}
 	.portada-video .bx-wrapper,
-	.portada-video .bx-wrapper > *{
+	.portada-video .bx-viewport{
 		height: 100% !important;
 	}
 	.portada-video .slider-home{
