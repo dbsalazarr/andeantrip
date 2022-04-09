@@ -9,6 +9,9 @@
 				<img src="<?php echo get_template_directory_uri(); ?>/media/slider/valle-sagrado-de-los-incas.jpg" alt="slider #3">
 				<img src="<?php echo get_template_directory_uri(); ?>/media/slider/ventana-machupicchu.jpg" alt="slider #4">
 			</div>
+			<div class="andean-search-form">
+				<?php get_search_form(); ?>
+			</div>
 		</div>
 		<!-- FIN VIDEO OR SLIDER -->
 

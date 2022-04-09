@@ -338,6 +338,7 @@ h6{}
 		height: calc(100vh - 8rem);
 	}
 	.portada-video{
+		position: relative;
 		display: block;
 		height: 100%;
 	}
