@@ -23,7 +23,7 @@
 
 	?> 
 	
-	<section class="tour-grid">
+	<section class="">
 			<?php while( $busqueda->have_posts() ) : $busqueda->the_post(); ?>
 
 			<article>
