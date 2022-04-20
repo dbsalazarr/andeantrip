@@ -125,6 +125,12 @@ h6{}
 .titulo-seccion{
 	margin: 2.5rem;
 }
+.square-button{
+	--size: 6rem;
+	width: var(--size);
+	height: var(--size);
+	background: var(--purple-title);
+}
 .boton{
 	color: var(--blanco);
 	display: inline-block;
@@ -162,7 +168,15 @@ h6{}
 	padding-top: 20px;
 }
 .content-header-hero{
-	height: 450px;
+	height: 45rem;
+	position: relative;
+}
+.content-header-hero .andean-form-content{
+	top: 70%;
+}
+.content-header-hero .andean-form-content label{
+	color: var(--negro);
+	font-weight: 300;
 }
 .content-header-hero-tour{
 	height: 20rem;
@@ -893,6 +907,7 @@ h6{}
 */
 .destino-destacado{
 	position: relative;
+	color: var(--blanco);
 }
 .destino-destacado::after{
 	content: '';
@@ -916,9 +931,6 @@ h6{}
 	bottom: 2rem;
 	z-index: 2;
 }
-.destino-destacado .titulo-destino a{
-	color: var(--blanco);
-}
 @media only screen and (min-width: 768px){
 	.destinos-content{
 		display: flex;
@@ -932,6 +944,11 @@ h6{}
 @media only screen and (min-width: 1024px){
 	.destinos-content .destino-destacado{
 		flex: 0 1 25%;
+		min-height: 30rem;
+	}
+	.destinos-content .destino-destacado img{
+		height: 100%;
+		object-fit: cover;
 	}
 }
 /*
@@ -1010,6 +1027,7 @@ h6{}
 }
 .tour .descripcion-tour{
 	padding: 2rem;
+	padding-top: 4rem;
 	text-align: right;
 	margin-bottom: 2rem;
 }
@@ -1059,7 +1077,36 @@ h6{}
 		margin-bottom: 0;
 	}
 }
-
+/*
+	BLOG CONTENT
+*/
+.content-post .subtitle-post{
+	color: var(--purple-title);
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.content-post .title-post{
+	font-size: 4rem;
+	font-weight: 300;
+	margin-bottom: 2rem;
+}
+.content-blog .tour{
+	position: relative;
+}
+.blog-seccion-content p{
+	line-height: 2.4rem;
+	font-family: var(--fuenteSecundaria);
+}
+.content-blog .tour .descripcion-tour a{
+	display: inline-block;
+	box-shadow: none;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.content-blog .tour .descripcion-tour a img{
+	object-fit: contain;
+}
 /*
 	REBUILD OF KADANCE STYLES
 */

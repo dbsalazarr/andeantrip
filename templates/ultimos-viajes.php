@@ -14,12 +14,12 @@
 	?>
 	<div class="destinos-content">
 		<?php while( $destinos->have_posts() ) : $destinos-> the_post(); ?>
-			<div class="destino-destacado">
+			<a class="destino-destacado" href=" <?php the_permalink(); ?> ">
 				<?php the_post_thumbnail('blog'); ?>
 				<h3 class="titulo-destino">
-					<a href=" <?php the_permalink(); ?> "> <?php the_title(); ?> </a>
+					 <?php the_title(); ?>
 				</h3>
-			</div>
+			</a>
 		<?php endwhile; wp_reset_postdata(); ?>
 	</div>
 </section>

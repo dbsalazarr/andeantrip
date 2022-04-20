@@ -70,13 +70,20 @@
 		<div class="seccion title-cabecera-page">
 			<?php   if ( is_home() ) :  ?>
 				<h2> Blog </h2>
+				<p>
+					<span> <a href="<?php esc_url(bloginfo("url")); ?>"> Inicio </a></span> | <span> Blog </span>
+				</p>
 			<?php else : ?>
 				<h2> <?php the_title(); ?> </h2>
+				<p>
+					<span> <a href="<?php esc_url(bloginfo("url")); ?>"> Inicio </a></span> | <span> <?php the_title(); ?></span>
+				</p>
 			<?php endif; ?>
 
-			<p>
-				<span> <a href="<?php esc_url(bloginfo("url")); ?>"> Inicio </a></span> | <span> <?php the_title(); ?></span>
-			</p>
-
+			<?php if( is_page('tours') ) : ?>
+				<div class="andean-form-content">
+					<?php get_search_form(); ?>
+				</div>
+			<?php endif; ?>
 		</div>
 	</div>
