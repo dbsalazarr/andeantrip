@@ -125,6 +125,12 @@ h6{}
 .titulo-seccion{
 	margin: 2.5rem;
 }
+.square-button{
+	--size: 6rem;
+	width: var(--size);
+	height: var(--size);
+	background: var(--purple-title);
+}
 .boton{
 	color: var(--blanco);
 	display: inline-block;
@@ -1010,6 +1016,7 @@ h6{}
 }
 .tour .descripcion-tour{
 	padding: 2rem;
+	padding-top: 4rem;
 	text-align: right;
 	margin-bottom: 2rem;
 }
@@ -1059,7 +1066,26 @@ h6{}
 		margin-bottom: 0;
 	}
 }
-
+/*
+	BLOG CONTENT
+*/
+.content-post .title-post{
+	color: var(--purple-title);
+	text-transform: uppercase;
+}
+.content-blog .tour{
+	position: relative;
+}
+.content-blog .tour .descripcion-tour a{
+	display: inline-block;
+	box-shadow: none;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.content-blog .tour .descripcion-tour a img{
+	object-fit: contain;
+}
 /*
 	REBUILD OF KADANCE STYLES
 */
