@@ -899,6 +899,7 @@ h6{}
 */
 .destino-destacado{
 	position: relative;
+	color: var(--blanco);
 }
 .destino-destacado::after{
 	content: '';
@@ -922,9 +923,6 @@ h6{}
 	bottom: 2rem;
 	z-index: 2;
 }
-.destino-destacado .titulo-destino a{
-	color: var(--blanco);
-}
 @media only screen and (min-width: 768px){
 	.destinos-content{
 		display: flex;
@@ -938,6 +936,11 @@ h6{}
 @media only screen and (min-width: 1024px){
 	.destinos-content .destino-destacado{
 		flex: 0 1 25%;
+		min-height: 30rem;
+	}
+	.destinos-content .destino-destacado img{
+		height: 100%;
+		object-fit: cover;
 	}
 }
 /*
