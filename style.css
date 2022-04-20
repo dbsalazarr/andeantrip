@@ -1069,12 +1069,22 @@ h6{}
 /*
 	BLOG CONTENT
 */
-.content-post .title-post{
+.content-post .subtitle-post{
 	color: var(--purple-title);
 	text-transform: uppercase;
+	font-weight: 700;
+}
+.content-post .title-post{
+	font-size: 4rem;
+	font-weight: 300;
+	margin-bottom: 2rem;
 }
 .content-blog .tour{
 	position: relative;
+}
+.blog-seccion-content p{
+	line-height: 2.4rem;
+	font-family: var(--fuenteSecundaria);
 }
 .content-blog .tour .descripcion-tour a{
 	display: inline-block;

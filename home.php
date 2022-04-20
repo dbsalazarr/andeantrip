@@ -1,6 +1,6 @@
 <?php get_header('page'); ?>
 	<section class="seccion content-post">
-
+		<span class="subtitle-post"> Lugares Magicos </span>
 		<h2 class="title-post"> <?php the_title(); ?> </h2>
 		
 		<div class="blog-seccion-content">
