@@ -168,7 +168,15 @@ h6{}
 	padding-top: 20px;
 }
 .content-header-hero{
-	height: 450px;
+	height: 45rem;
+	position: relative;
+}
+.content-header-hero .andean-form-content{
+	top: 70%;
+}
+.content-header-hero .andean-form-content label{
+	color: var(--negro);
+	font-weight: 300;
 }
 .content-header-hero-tour{
 	height: 20rem;

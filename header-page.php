@@ -80,5 +80,10 @@
 				</p>
 			<?php endif; ?>
 
+			<?php if( is_page('tours') ) : ?>
+				<div class="andean-form-content">
+					<?php get_search_form(); ?>
+				</div>
+			<?php endif; ?>
 		</div>
 	</div>
